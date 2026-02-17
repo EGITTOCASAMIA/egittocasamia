@@ -3,15 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Dentro l’Egitto — EGITTOCASAMIA</title>
-  <meta name="description" content="Cose vere: luoghi, cibo, momenti. L’Egitto visto da dentro." />
+  <meta name="description" content="Posti, cibo, momenti. L’Egitto visto da dentro, a pezzi brevi." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#F3F2ED" />
+
+  <link rel="canonical" href="https://egittocasamia.it/dentro-legitto/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
 <body>
   <header class="top">
     <a class="brand" href="/">EGITTOCASAMIA</a>
-    <nav class="nav">
+
+    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Navigazione principale">
       <a href="/organizzare-il-viaggio/">Organizzare</a>
       <a href="/destinazioni/">Destinazioni</a>
       <a href="/itinerari/">Itinerari</a>
@@ -24,7 +39,7 @@
       <h1>Dentro l’Egitto</h1>
       <p class="lead">
         Piccole cose che ti fanno capire un posto.<br>
-        Non guide. Non liste. Momenti.
+        Niente liste infinite. Solo momenti.
       </p>
     </section>
 
@@ -50,9 +65,23 @@
       </a>
     </section>
 
-    <section style="margin-top:40px; opacity:.7; font-size:13px;">
-      — EGITTOCASAMIA
-    </section>
+    <div class="signature">
+      <span class="dash">—</span> EGITTOCASAMIA
+    </div>
   </main>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    btn.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.querySelectorAll(".nav a").forEach(a => {
+      a.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
 </body>
 </html>
