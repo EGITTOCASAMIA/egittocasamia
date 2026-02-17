@@ -4,156 +4,219 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>EGITTOCASAMIA — good vibes + guida pratica per l’Egitto</title>
+  <title>EGITTOCASAMIA — Se stai pensando all’Egitto, inizia da qui.</title>
   <meta name="description" content="Se stai pensando all’Egitto, inizia da qui. È bellissimo. A volte caotico. Molto più vario di quanto sembra." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#F6F7FB" />
-  <link rel="canonical" href="https://egittocasamia.it/" />
+  <meta name="theme-color" content="#F7F3EA" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="EGITTOCASAMIA" />
-  <meta property="og:description" content="Good vibes + guida pratica per vivere l’Egitto." />
-  <meta property="og:url" content="https://egittocasamia.it/" />
-  <meta property="og:image" content="https://egittocasamia.it/assets/images/hero.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta property="og:description" content="Se stai pensando all’Egitto, inizia da qui. È bellissimo. A volte caotico. Molto più vario di quanto sembra." />
+  <meta property="og:image" content="/assets/images/og.jpg" />
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
 <body>
   <header class="top">
-    <a class="brand" href="/" aria-label="EGITTOCASAMIA home">
-      <span class="dot" aria-hidden="true"></span>
-      EGITTOCASAMIA
-      <span class="dash" aria-hidden="true"></span>
-    </a>
+    <div class="container top-inner">
+      <a class="brand" href="/" aria-label="EGITTOCASAMIA home">
+        <span class="dot" aria-hidden="true"></span>
+        EGITTOCASAMIA
+      </a>
 
-    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
-      <span></span>
-    </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false">
+        Menu <span aria-hidden="true">☰</span>
+      </button>
 
-    <nav class="nav" aria-label="Navigazione principale">
-      <a href="/organizzare-il-viaggio/">Organizzare</a>
-      <a href="/destinazioni/">Destinazioni</a>
-      <a href="/itinerari/">Itinerari</a>
-      <a href="/dentro-egitto/">Dentro l’Egitto</a>
-    </nav>
+      <nav class="nav" id="siteNav" aria-label="Navigazione principale">
+        <a href="/organizzare-il-viaggio/">Organizzare</a>
+        <a href="/destinazioni/">Destinazioni</a>
+        <a href="/itinerari/">Itinerari</a>
+        <a href="/dentro-legitto/">Dentro l’Egitto</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-
+  <main>
     <!-- HERO -->
-    <section class="hero" aria-label="Copertina">
-      <div class="hero-inner">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="kicker">
+            <span class="mark" aria-hidden="true"></span>
+            concretezza + vibe
+          </div>
 
-        <div class="hero-copy">
-          <div class="kicker">good vibes + guida pratica</div>
-
-          <h1>EGITTOCASAMIA</h1>
+          <h1 class="h1">EGITTOCASAMIA</h1>
 
           <p class="lead">
             Se stai pensando all’Egitto, inizia da qui.<br>
-            Bello, a volte caotico, molto più vario di quanto sembra.
+            È bellissimo. A volte caotico. Molto più vario di quanto sembra.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="/organizzare-il-viaggio/">Parti dalle basi</a>
-            <a class="btn ghost" href="/destinazioni/">Scegli una zona</a>
+          <div class="cta-row">
+            <a class="btn primary" href="/organizzare-il-viaggio/">
+              Parti dalle basi <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn" href="/destinazioni/">
+              Scegli una zona <span class="arrow" aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
 
-        <div class="hero-media" aria-label="Immagine di copertina">
-          <img src="/assets/images/hero.jpg" alt="Atmosfera Egitto" loading="eager">
-          <div class="pill" aria-hidden="true">
-            <span class="spark"></span>
+        <div class="hero-photo" aria-label="Foto: Egitto">
+          <img src="/assets/images/hero.jpg" alt="Scorcio in Egitto, luce naturale, pietra e spazio." />
+          <div class="photo-caption">
+            <span class="mini" aria-hidden="true"></span>
             zero fuffa, solo cose utili
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- HUB -->
+    <!-- ORGANIZZARE -->
     <section class="section">
-      <div class="section-head">
-        <h2 class="section-title">I 4 percorsi</h2>
-        <p class="section-sub">Chiari, veloci, “mi orienta subito”.</p>
+      <div class="container section-head">
+        <div>
+          <h2 class="h2">Organizzare il viaggio</h2>
+          <p class="sub">Prima di scegliere un posto, capisci come funziona.</p>
+        </div>
+        <a class="btn" href="/organizzare-il-viaggio/">Apri la guida <span class="arrow" aria-hidden="true">→</span></a>
       </div>
 
-      <div class="grid">
-
-        <a class="card" href="/organizzare-il-viaggio/">
-          <div class="card-media">
-            <img src="/assets/images/viaggio.jpg" alt="Organizzare il viaggio" loading="lazy">
+      <div class="container grid" role="list">
+        <a class="tile wide" role="listitem" href="/organizzare-il-viaggio/">
+          <div class="tile-media">
+            <img src="/assets/images/cairo.jpg" alt="Strada al Cairo, luce calda e vita reale." />
           </div>
-          <div class="card-body">
-            <div class="badge">Start here</div>
-            <h2>Organizzare il viaggio</h2>
-            <p>Visto, periodo, costi, SIM, spostamenti. Le basi fatte bene, senza ansia.</p>
-          </div>
-        </a>
-
-        <a class="card" href="/destinazioni/">
-          <div class="card-media">
-            <img src="/assets/images/destinazioni.jpg" alt="Destinazioni in Egitto" loading="lazy"
-                 onerror="this.onerror=null; this.src='/assets/images/hero.jpg';">
-          </div>
-          <div class="card-body">
-            <div class="badge">Pick a vibe</div>
-            <h2>Destinazioni</h2>
-            <p>Cairo, Luxor, Aswan, Mar Rosso, Alessandria. Pro/contro chiari.</p>
+          <div class="tile-body">
+            <h3 class="tile-title">Le basi, senza ansia</h3>
+            <p class="tile-text">Quando andare, costi veri, come muoversi, cosa aspettarsi. Ordinato. Con calma.</p>
+            <div class="meta">
+              <span class="pill"><span class="dot" aria-hidden="true"></span> pilastro</span>
+              <span>leggi →</span>
+            </div>
           </div>
         </a>
 
-        <a class="card" href="/itinerari/">
-          <div class="card-media">
-            <img src="/assets/images/itinerari.jpg" alt="Itinerari in Egitto" loading="lazy">
+        <a class="tile narrow" role="listitem" href="/organizzare-il-viaggio/">
+          <div class="tile-media">
+            <img src="/assets/images/redsea.jpg" alt="Mare e luce del Mar Rosso." />
           </div>
-          <div class="card-body">
-            <div class="badge">Ready-to-go</div>
-            <h2>Itinerari</h2>
-            <p>7 giorni, 10 giorni, mare + cultura. Ritmo umano, incastri sensati.</p>
-          </div>
-        </a>
-
-        <a class="card" href="/dentro-egitto/">
-          <div class="card-media">
-            <img src="/assets/images/dentro_legitto.jpg" alt="Dentro l’Egitto" loading="lazy">
-          </div>
-          <div class="card-body">
-            <div class="badge">Real life</div>
-            <h2>Dentro l’Egitto</h2>
-            <p>Cibo, posti, momenti. Piccoli pezzi che ti mettono nella testa giusta.</p>
+          <div class="tile-body">
+            <h3 class="tile-title">Zone diverse, vibe diverse</h3>
+            <p class="tile-text">Non è “Egitto = una cosa sola”. Qui capisci le differenze.</p>
+            <div class="meta">
+              <span class="pill"><span class="dot" aria-hidden="true"></span> orientamento</span>
+              <span>leggi →</span>
+            </div>
           </div>
         </a>
-
       </div>
     </section>
 
-    <footer class="foot">
-      <p>© <span id="y"></span> EGITTOCASAMIA</p>
-    </footer>
+    <!-- DESTINAZIONI -->
+    <section class="section">
+      <div class="container section-head">
+        <div>
+          <h2 class="h2">Destinazioni</h2>
+          <p class="sub">Ogni zona ha un ritmo diverso.</p>
+        </div>
+        <a class="btn" href="/destinazioni/">Vedi tutte <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
 
+      <div class="container grid" role="list">
+        <a class="tile narrow" role="listitem" href="/destinazioni/">
+          <div class="tile-media">
+            <img src="/assets/images/cairo.jpg" alt="Il Cairo: energia e dettagli." />
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Il Cairo</h3>
+            <p class="tile-text">Energia, caos, bellezza. Se lo capisci, ti innamori.</p>
+            <div class="meta"><span class="pill"><span class="dot" aria-hidden="true"></span> città</span><span>apri →</span></div>
+          </div>
+        </a>
+
+        <a class="tile narrow" role="listitem" href="/destinazioni/">
+          <div class="tile-media">
+            <img src="/assets/images/upper.jpg" alt="Alto Egitto: luce e pietra." />
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Alto Egitto</h3>
+            <p class="tile-text">Templi, fiume, distanze. Ritmo lento, potente.</p>
+            <div class="meta"><span class="pill"><span class="dot" aria-hidden="true"></span> storia</span><span>apri →</span></div>
+          </div>
+        </a>
+
+        <a class="tile narrow" role="listitem" href="/destinazioni/">
+          <div class="tile-media">
+            <img src="/assets/images/oases.jpg" alt="Oasi: spazio e silenzio." />
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Oasi</h3>
+            <p class="tile-text">Silenzio, deserto, notti vere. Non per tutti. Per molti sì.</p>
+            <div class="meta"><span class="pill"><span class="dot" aria-hidden="true"></span> natura</span><span>apri →</span></div>
+          </div>
+        </a>
+
+        <a class="tile narrow" role="listitem" href="/destinazioni/">
+          <div class="tile-media">
+            <img src="/assets/images/redsea.jpg" alt="Mar Rosso: mare e luce." />
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Mar Rosso</h3>
+            <p class="tile-text">Mare, immersioni, giornate semplici. Qui ci si riposa.</p>
+            <div class="meta"><span class="pill"><span class="dot" aria-hidden="true"></span> mare</span><span>apri →</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- DENTRO L'EGITTO -->
+    <section class="section">
+      <div class="container section-head">
+        <div>
+          <h2 class="h2">Dentro l’Egitto</h2>
+          <p class="sub">Per capire un posto, devi entrarci.</p>
+        </div>
+        <a class="btn" href="/dentro-legitto/">Leggi <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="container grid" role="list">
+        <a class="tile wide" role="listitem" href="/dentro-legitto/">
+          <div class="tile-media">
+            <img src="/assets/images/cairo.jpg" alt="Tahrir e vita quotidiana al Cairo." />
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Koshary a Tahrir</h3>
+            <p class="tile-text">Un posto reale, una cosa concreta. E poi: come si mangia davvero.</p>
+            <div class="meta"><span class="pill"><span class="dot" aria-hidden="true"></span> quotidiano</span><span>apri →</span></div>
+          </div>
+        </a>
+
+        <a class="tile narrow" role="listitem" href="/dentro-legitto/">
+          <div class="tile-media">
+            <img src="/assets/images/upper.jpg" alt="Ramadan: luce serale e movimento." />
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Ramadan, senza stereotipi</h3>
+            <p class="tile-text">Cosa cambia davvero nelle strade. E cosa trovi a tavola.</p>
+            <div class="meta"><span class="pill"><span class="dot" aria-hidden="true"></span> cultura</span><span>apri →</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div>EGITTOCASAMIA è un ecosistema editoriale curato per capire l’Egitto prima di viverlo.</div>
+        <div class="sig">— EGITTOCASAMIA</div>
+      </div>
+    </footer>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    const btn = document.getElementById("menuBtn");
-    btn.addEventListener("click", () => {
-      const open = document.body.classList.toggle("nav-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-
-    document.querySelectorAll(".nav a").forEach(a => {
-      a.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-  </script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
