@@ -3,81 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>Itinerari — EGITTOCASAMIA</title>
-  <meta name="description" content="7 giorni, 10 giorni, mare + cultura. Percorsi chiari per vivere l’Egitto bene." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#F3F2ED" />
-
-  <link rel="canonical" href="https://egittocasamia.it/itinerari/" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Itinerari chiari per vivere l’Egitto: semplici, realistici, senza fuffa." />
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
-
 <body>
   <header class="top">
-    <a class="brand" href="/">EGITTOCASAMIA</a>
-
-    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
-      <span></span>
-    </button>
-
-    <nav class="nav" aria-label="Navigazione principale">
-      <a href="/organizzare-il-viaggio/">Organizzare</a>
-      <a href="/destinazioni/">Destinazioni</a>
-      <a href="/itinerari/">Itinerari</a>
-      <a href="/dentro-legitto/">Dentro l’Egitto</a>
-    </nav>
+    <div class="container top-inner">
+      <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> EGITTOCASAMIA</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="nav" id="siteNav" aria-label="Navigazione principale">
+        <a href="/organizzare-il-viaggio/">Organizzare</a>
+        <a href="/destinazioni/">Destinazioni</a>
+        <a href="/itinerari/">Itinerari</a>
+        <a href="/dentro-legitto/">Dentro l’Egitto</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
+  <main class="page">
+    <div class="container">
       <h1>Itinerari</h1>
-      <p class="lead">
-        Se vuoi un’idea chiara prima di prenotare, parti da qui.<br>
-        Percorsi concreti, senza stress.
+      <p>
+        Itinerari = decisioni più facili. Qui facciamo percorsi realistici, con ritmo umano.
       </p>
-    </section>
 
-    <section class="grid">
-      <a class="card" href="#">
-        <h2>7 giorni</h2>
-        <p>Cairo + Luxor. Il classico, fatto bene.</p>
-      </a>
+      <div class="note">
+        Itinerari che funzionano subito:
+        6 giorni (Cairo + Giza + un giorno lento) • 10 giorni (Cairo + Luxor/Aswan) • 7 giorni Mar Rosso easy
+      </div>
 
-      <a class="card" href="#">
-        <h2>10 giorni</h2>
-        <p>Cultura e mare, con un ritmo umano.</p>
-      </a>
-
-      <a class="card" href="#">
-        <h2>Mare + cultura</h2>
-        <p>Templi e poi acqua. Equilibrio perfetto.</p>
-      </a>
-
-      <a class="card" href="#">
-        <h2>Solo mare</h2>
-        <p>Se vuoi staccare e basta.</p>
-      </a>
-    </section>
+      <p class="sig">— EGITTOCASAMIA</p>
+    </div>
   </main>
 
-  <script>
-    const btn = document.getElementById("menuBtn");
-    btn.addEventListener("click", () => {
-      const open = document.body.classList.toggle("nav-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    document.querySelectorAll(".nav a").forEach(a => {
-      a.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-  </script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
