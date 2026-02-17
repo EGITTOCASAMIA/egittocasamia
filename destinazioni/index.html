@@ -2,42 +2,106 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Destinazioni — EGITTOCASAMIA</title>
-  <meta name="description" content="Destinazioni in Egitto: zone diverse, vibe diverse. Scegli in modo semplice." />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Destinazioni — Egitto Casa Mia</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="container top-inner">
-      <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> EGITTOCASAMIA</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
-      <nav class="nav" id="siteNav" aria-label="Navigazione principale">
-        <a href="/organizzare-il-viaggio/">Organizzare</a>
-        <a href="/destinazioni/">Destinazioni</a>
-        <a href="/itinerari/">Itinerari</a>
-        <a href="/dentro-legitto/">Dentro l’Egitto</a>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="../index.html"><span class="dot"></span><span>EGITTO CASA MIA</span></a>
+      <nav class="nav_links">
+        <a href="../organizzare-il-viaggio/index.html">Organizzare</a>
+        <a href="../destinazioni/index.html">Destinazioni</a>
+        <a href="../itinerari/index.html">Itinerari</a>
+        <a href="../dentro-legitto/index.html">Dentro l’Egitto</a>
       </nav>
+      <div class="nav_cta">
+        <a class="btn" href="../index.html#sezioni">Home</a>
+        <a class="btn primary" href="../index.html#contatti">Scrivimi</a>
+      </div>
+      <button class="burger" type="button" data-burger aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
 
-  <main class="page">
-    <div class="container">
-      <h1>Destinazioni</h1>
-      <p>
-        Non esiste “l’Egitto” come blocco unico. Esistono zone con ritmi diversi.
-        Qui scegli in base a quello che vuoi vivere.
-      </p>
+    <div class="mobile_menu" data-mobile-menu>
+      <a href="../organizzare-il-viaggio/index.html">Organizzare il viaggio</a>
+      <a href="../destinazioni/index.html">Destinazioni</a>
+      <a href="../itinerari/index.html">Itinerari</a>
+      <a href="../dentro-legitto/index.html">Dentro l’Egitto</a>
+      <div class="row">
+        <a class="btn" href="../index.html#sezioni" style="width:100%">Home</a>
+        <a class="btn primary" href="../index.html#contatti" style="width:100%">Scrivimi</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-      <div class="note">
-        Se vuoi, la prossima cosa che facciamo è creare 5 pagine (una per zona) con:
-        vibe • giorni minimi • cosa vedere • cosa mangiare • errori comuni (senza terrorismo)
+<main class="section">
+  <div class="container">
+    <div class="hero_card" style="margin-top:14px;">
+      <img src="../assets/images/destinazioni_luxor.jpg" alt="Templi e colonne a Luxor" />
+      <div class="hero_overlay"></div>
+      <div class="hero_content">
+        <div class="hero_text">
+          <div class="badge">🗺 Destinazioni</div>
+          <h1>Scegli le tappe con criterio.</h1>
+          <p class="hero_p">
+            Ogni zona ha un “perché”. Qui ti aiuto a capire quale fa per te, senza farti perdere tempo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="cards">
+        <div class="card">
+          <div class="card_body">
+            <div class="card_title"><h3>Cairo</h3><span class="chip">città</span></div>
+            <p>Musei, storia, vita quotidiana. Da fare bene, con ritmi giusti.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_body">
+            <div class="card_title"><h3>Luxor</h3><span class="chip">storia</span></div>
+            <p>Templi e Valle dei Re. È il posto che ti fa dire “ok, ci voleva”.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_body">
+            <div class="card_title"><h3>Mar Rosso</h3><span class="chip">mare</span></div>
+            <p>Relax e acqua bella. Perfetto per bilanciare città e storia.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_body">
+            <div class="card_title"><h3>Sinai</h3><span class="chip">natura</span></div>
+            <p>Ritmi più lenti, deserti e mare. Ideale se vuoi respirare.</p>
+          </div>
+        </div>
       </div>
 
-      <p class="sig">— EGITTOCASAMIA</p>
-    </div>
-  </main>
+      <div style="margin-top:16px;">
+        <a class="btn primary" href="../itinerari/index.html">Vai agli itinerari →</a>
+      </div>
+    </section>
+  </div>
+</main>
 
-  <script src="/assets/js/main.js"></script>
+<footer>
+  <div class="container">
+    <div class="footer_grid">
+      <div><strong>Egitto Casa Mia</strong><div class="small" style="margin-top:6px;">Scelta tappe = viaggio più facile.</div></div>
+      <div class="small">Alcune immagini: Unsplash / Pexels.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
