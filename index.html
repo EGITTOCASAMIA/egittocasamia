@@ -4,16 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>EGITTOCASAMIA — Se stai pensando all’Egitto, inizia da qui</title>
+  <title>EGITTOCASAMIA — good vibes + guida pratica per l’Egitto</title>
   <meta name="description" content="Se stai pensando all’Egitto, inizia da qui. È bellissimo. A volte caotico. Molto più vario di quanto sembra." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#F3F2ED" />
+  <meta name="theme-color" content="#F6F7FB" />
   <link rel="canonical" href="https://egittocasamia.it/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="EGITTOCASAMIA" />
-  <meta property="og:description" content="Se stai pensando all’Egitto, inizia da qui." />
+  <meta property="og:description" content="Good vibes + guida pratica per vivere l’Egitto." />
   <meta property="og:url" content="https://egittocasamia.it/" />
   <meta property="og:image" content="https://egittocasamia.it/assets/images/hero.jpg" />
 
@@ -26,7 +25,11 @@
 
 <body>
   <header class="top">
-    <a class="brand" href="/">EGITTOCASAMIA</a>
+    <a class="brand" href="/" aria-label="EGITTOCASAMIA home">
+      <span class="dot" aria-hidden="true"></span>
+      EGITTOCASAMIA
+      <span class="dash" aria-hidden="true"></span>
+    </a>
 
     <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
       <span></span>
@@ -44,22 +47,32 @@
 
     <!-- HERO -->
     <section class="hero" aria-label="Copertina">
-      <img src="/assets/images/hero.jpg" alt="Atmosfera Egitto" loading="eager">
-
       <div class="hero-inner">
-        <div class="kicker">Guida pratica + vibe reale</div>
 
-        <h1>EGITTOCASAMIA</h1>
+        <div class="hero-copy">
+          <div class="kicker">good vibes + guida pratica</div>
 
-        <p class="lead">
-          Se stai pensando all’Egitto, inizia da qui.<br>
-          È bellissimo. A volte caotico. Molto più vario di quanto sembra.
-        </p>
+          <h1>EGITTOCASAMIA</h1>
 
-        <div class="hero-actions">
-          <a class="btn" href="/organizzare-il-viaggio/">Parti dalle basi</a>
-          <a class="btn alt" href="/destinazioni/">Scegli una zona</a>
+          <p class="lead">
+            Se stai pensando all’Egitto, inizia da qui.<br>
+            Bello, a volte caotico, molto più vario di quanto sembra.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="/organizzare-il-viaggio/">Parti dalle basi</a>
+            <a class="btn ghost" href="/destinazioni/">Scegli una zona</a>
+          </div>
         </div>
+
+        <div class="hero-media" aria-label="Immagine di copertina">
+          <img src="/assets/images/hero.jpg" alt="Atmosfera Egitto" loading="eager">
+          <div class="pill" aria-hidden="true">
+            <span class="spark"></span>
+            zero fuffa, solo cose utili
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -67,9 +80,8 @@
     <section class="section">
       <div class="section-head">
         <h2 class="section-title">I 4 percorsi</h2>
-        <p class="section-sub">Pochi ingressi, chiari. Così ti orienti subito e non perdi tempo.</p>
+        <p class="section-sub">Chiari, veloci, “mi orienta subito”.</p>
       </div>
-      <div class="divider"></div>
 
       <div class="grid">
 
@@ -78,22 +90,21 @@
             <img src="/assets/images/viaggio.jpg" alt="Organizzare il viaggio" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="badge">Primo step</div>
+            <div class="badge">Start here</div>
             <h2>Organizzare il viaggio</h2>
-            <p>Visto, periodo giusto, costi, SIM, spostamenti. Le basi fatte bene, senza ansia.</p>
+            <p>Visto, periodo, costi, SIM, spostamenti. Le basi fatte bene, senza ansia.</p>
           </div>
         </a>
 
         <a class="card" href="/destinazioni/">
           <div class="card-media">
-            <!-- fallback: se non hai ancora destinazioni.jpg, mostra hero -->
             <img src="/assets/images/destinazioni.jpg" alt="Destinazioni in Egitto" loading="lazy"
                  onerror="this.onerror=null; this.src='/assets/images/hero.jpg';">
           </div>
           <div class="card-body">
-            <div class="badge">Dove andare</div>
+            <div class="badge">Pick a vibe</div>
             <h2>Destinazioni</h2>
-            <p>Cairo, Luxor, Aswan, Mar Rosso, Alessandria. Pro/contro chiari, senza fuffa.</p>
+            <p>Cairo, Luxor, Aswan, Mar Rosso, Alessandria. Pro/contro chiari.</p>
           </div>
         </a>
 
@@ -102,7 +113,7 @@
             <img src="/assets/images/itinerari.jpg" alt="Itinerari in Egitto" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="badge">Percorsi pronti</div>
+            <div class="badge">Ready-to-go</div>
             <h2>Itinerari</h2>
             <p>7 giorni, 10 giorni, mare + cultura. Ritmo umano, incastri sensati.</p>
           </div>
@@ -110,12 +121,12 @@
 
         <a class="card" href="/dentro-egitto/">
           <div class="card-media">
-            <img src="/assets/images/dentro_legitto.jpg" alt="Dentro l'Egitto" loading="lazy">
+            <img src="/assets/images/dentro_legitto.jpg" alt="Dentro l’Egitto" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="badge">Vibe reale</div>
+            <div class="badge">Real life</div>
             <h2>Dentro l’Egitto</h2>
-            <p>Cibo, posti, momenti. Piccoli pezzi che ti fanno “capire” l’Egitto prima di arrivare.</p>
+            <p>Cibo, posti, momenti. Piccoli pezzi che ti mettono nella testa giusta.</p>
           </div>
         </a>
 
