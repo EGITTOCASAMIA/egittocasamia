@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
@@ -34,53 +34,98 @@
   </header>
 
   <main class="container">
+
     <section class="hero">
-      <h1>EGITTOCASAMIA</h1>
-      <p class="lead">
-        Se stai pensando all’Egitto, inizia da qui.<br>
-        È bellissimo. A volte caotico. Molto più vario di quanto sembra.
-      </p>
+      <div class="hero-text">
+        <div class="kicker">Guida pratica + vibe</div>
+
+        <h1>EGITTOCASAMIA</h1>
+
+        <p class="lead">
+          Se stai pensando all’Egitto, inizia da qui.<br>
+          È bellissimo. A volte caotico. Molto più vario di quanto sembra.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="/organizzare-il-viaggio/">Parti dalle basi</a>
+          <a class="btn alt" href="/destinazioni/">Scegli una zona</a>
+        </div>
+      </div>
+
+      <div class="hero-media" aria-label="Immagine di copertina">
+        <img src="/assets/images/hero.jpg" alt="Egitto: atmosfera e viaggio" loading="eager">
+      </div>
     </section>
 
-    <section class="grid">
-      <a class="card" href="/organizzare-il-viaggio/">
-        <h2>Organizzare il viaggio</h2>
-        <p>Visto, periodo giusto, costi, sim e spostamenti. Le basi, fatte bene.</p>
-      </a>
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">I 4 percorsi</h2>
+        <p class="section-sub">Pochi ingressi, chiari. Così non ti perdi.</p>
+      </div>
+      <div class="divider"></div>
 
-      <a class="card" href="/destinazioni/">
-        <h2>Destinazioni</h2>
-        <p>Cairo, Luxor, Aswan, Mar Rosso, Alessandria… e poi vediamo dove ti porta.</p>
-      </a>
+      <div class="grid">
+        <a class="card" href="/organizzare-il-viaggio/">
+          <div class="card-media">
+            <img src="/assets/images/card-organizzare.jpg" alt="Organizzare il viaggio" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="badge">Primo step</div>
+            <h2>Organizzare il viaggio</h2>
+            <p>Visto, periodo giusto, costi, SIM, spostamenti. Le basi fatte bene.</p>
+          </div>
+        </a>
 
-      <a class="card" href="/itinerari/">
-        <h2>Itinerari</h2>
-        <p>7 giorni, 10 giorni, mare + cultura. Percorsi chiari, senza incastrarti.</p>
-      </a>
+        <a class="card" href="/destinazioni/">
+          <div class="card-media">
+            <img src="/assets/images/card-destinazioni.jpg" alt="Destinazioni in Egitto" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="badge">Dove andare</div>
+            <h2>Destinazioni</h2>
+            <p>Cairo, Luxor, Aswan, Mar Rosso, Alessandria… e poi vediamo.</p>
+          </div>
+        </a>
 
-      <a class="card" href="/dentro-legitto/">
-        <h2>Dentro l’Egitto</h2>
-        <p>Posti, cibo, momenti. Piccoli pezzi che ti mettono nella vibe.</p>
-      </a>
+        <a class="card" href="/itinerari/">
+          <div class="card-media">
+            <img src="/assets/images/card-itinerari.jpg" alt="Itinerari in Egitto" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="badge">Percorsi pronti</div>
+            <h2>Itinerari</h2>
+            <p>7 giorni, 10 giorni, mare + cultura. Ritmo umano, zero incastri.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/dentro-legitto/">
+          <div class="card-media">
+            <img src="/assets/images/card-dentro.jpg" alt="Dentro l’Egitto" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="badge">Vibe reale</div>
+            <h2>Dentro l’Egitto</h2>
+            <p>Posti, cibo, momenti. Piccoli pezzi che ti mettono nella testa giusta.</p>
+          </div>
+        </a>
+      </div>
     </section>
 
     <footer class="foot">
       <p>© <span id="y"></span> EGITTOCASAMIA</p>
     </footer>
+
   </main>
 
   <script>
-    // anno
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // menu mobile
     const btn = document.getElementById("menuBtn");
     btn.addEventListener("click", () => {
       const open = document.body.classList.toggle("nav-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
-    // chiudi menu quando clicchi un link
     document.querySelectorAll(".nav a").forEach(a => {
       a.addEventListener("click", () => {
         document.body.classList.remove("nav-open");
