@@ -3,15 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Organizzare il viaggio — EGITTOCASAMIA</title>
   <meta name="description" content="Visto, periodo giusto, costi, sim e spostamenti. Le basi per organizzare l’Egitto fatte bene." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#F3F2ED" />
+
+  <link rel="canonical" href="https://egittocasamia.it/organizzare-il-viaggio/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
 <body>
   <header class="top">
     <a class="brand" href="/">EGITTOCASAMIA</a>
-    <nav class="nav">
+
+    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Navigazione principale">
       <a href="/organizzare-il-viaggio/">Organizzare</a>
       <a href="/destinazioni/">Destinazioni</a>
       <a href="/itinerari/">Itinerari</a>
@@ -23,30 +38,30 @@
     <section class="hero">
       <h1>Organizzare il viaggio</h1>
       <p class="lead">
-        Prima di partire, mettiamo le basi.<br>
-        Niente complicazioni. Solo le cose che servono davvero.
+        Prima di partire, mettiamo le basi. <span class="gold">Con calma</span>.<br>
+        Qui dentro ci finiscono solo le cose che servono davvero.
       </p>
     </section>
 
     <section class="grid">
       <a class="card" href="#">
         <h2>Documenti e visto</h2>
-        <p>Cosa serve davvero per entrare in Egitto e come funziona il visto.</p>
+        <p>Cosa serve per entrare in Egitto e come funziona il visto (senza ansia).</p>
       </a>
 
       <a class="card" href="#">
         <h2>Quando andare</h2>
-        <p>Clima, stagioni e periodo migliore per mare o cultura.</p>
+        <p>Clima e stagioni: mare, cultura, o entrambe.</p>
       </a>
 
       <a class="card" href="#">
-        <h2>Quanto costa</h2>
+        <h2>Quanto costa davvero</h2>
         <p>Budget realistico: voli, alloggi, trasporti, cibo.</p>
       </a>
 
       <a class="card" href="#">
         <h2>SIM e internet</h2>
-        <p>Come restare connessi senza perdere tempo in aeroporto.</p>
+        <p>Come restare connessi senza perdere tempo appena atterri.</p>
       </a>
 
       <a class="card" href="#">
@@ -55,10 +70,24 @@
       </a>
 
       <a class="card" href="#">
-        <h2>Piccole cose da sapere</h2>
-        <p>Cultura, abbigliamento, abitudini. Quelle cose che fanno la differenza.</p>
+        <h2>Piccole cose utili</h2>
+        <p>Abitudini, dress code, ritmi. Quelle cose che ti fanno vivere meglio tutto.</p>
       </a>
     </section>
   </main>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    btn.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.querySelectorAll(".nav a").forEach(a => {
+      a.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
 </body>
 </html>
