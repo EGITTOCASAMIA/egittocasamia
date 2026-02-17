@@ -2,42 +2,96 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Organizzare il viaggio — EGITTOCASAMIA</title>
-  <meta name="description" content="Le basi per organizzare l’Egitto: quando andare, costi reali, come muoversi, vibe delle zone." />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organizzare il viaggio — Egitto Casa Mia</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="container top-inner">
-      <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> EGITTOCASAMIA</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
-      <nav class="nav" id="siteNav" aria-label="Navigazione principale">
-        <a href="/organizzare-il-viaggio/">Organizzare</a>
-        <a href="/destinazioni/">Destinazioni</a>
-        <a href="/itinerari/">Itinerari</a>
-        <a href="/dentro-legitto/">Dentro l’Egitto</a>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="../index.html"><span class="dot"></span><span>EGITTO CASA MIA</span></a>
+      <nav class="nav_links">
+        <a href="../organizzare-il-viaggio/index.html">Organizzare</a>
+        <a href="../destinazioni/index.html">Destinazioni</a>
+        <a href="../itinerari/index.html">Itinerari</a>
+        <a href="../dentro-legitto/index.html">Dentro l’Egitto</a>
       </nav>
-    </div>
-  </header>
-
-  <main class="page">
-    <div class="container">
-      <h1>Organizzare il viaggio</h1>
-      <p>
-        Qui mettiamo ordine. Senza ansia. Senza “guide definitive”.
-        Solo le cose che servono davvero per partire bene.
-      </p>
-
-      <div class="note">
-        Prossimi blocchi (li scriviamo insieme):
-        quando andare • costi reali • come muoversi • SIM & internet • sicurezza senza drammi • cosa aspettarsi nelle città
+      <div class="nav_cta">
+        <a class="btn" href="../index.html#sezioni">Home</a>
+        <a class="btn primary" href="../index.html#contatti">Scrivimi</a>
       </div>
-
-      <p class="sig">— EGITTOCASAMIA</p>
+      <button class="burger" type="button" data-burger aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </main>
 
-  <script src="/assets/js/main.js"></script>
+    <div class="mobile_menu" data-mobile-menu>
+      <a href="../organizzare-il-viaggio/index.html">Organizzare il viaggio</a>
+      <a href="../destinazioni/index.html">Destinazioni</a>
+      <a href="../itinerari/index.html">Itinerari</a>
+      <a href="../dentro-legitto/index.html">Dentro l’Egitto</a>
+      <div class="row">
+        <a class="btn" href="../index.html#sezioni" style="width:100%">Home</a>
+        <a class="btn primary" href="../index.html#contatti" style="width:100%">Scrivimi</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="hero_card" style="margin-top:14px;">
+      <img src="../assets/images/organizzare_viaggio_egitto.jpg" alt="Valigia e preparativi di viaggio" />
+      <div class="hero_overlay"></div>
+      <div class="hero_content">
+        <div class="hero_text">
+          <div class="badge">🧳 Organizzare il viaggio</div>
+          <h1>La parte noiosa? La rendiamo semplice.</h1>
+          <p class="hero_p">
+            Qui trovi una checklist pratica: quello che serve davvero e quello che puoi tranquillamente ignorare.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="split">
+        <div class="panel">
+          <h3>Checklist essenziale</h3>
+          <ul class="list">
+            <li><strong>Documenti:</strong> passaporto + eventuale visto (dipende da dove entri).</li>
+            <li><strong>SIM / internet:</strong> meglio arrivare già con un piano chiaro (aeroporto o negozio affidabile).</li>
+            <li><strong>Soldi:</strong> un mix tra contanti e carta. Piccoli tagli utilissimi per mance e taxi.</li>
+            <li><strong>Spostamenti:</strong> decidi prima se fai Cairo+Luxor, oppure mare+Sinai, o un mix.</li>
+            <li><strong>Valigia:</strong> poche cose giuste (scarpe comode, crema solare, adattatore se serve).</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Consiglio veloce</h3>
+          <p>
+            Se sei indeciso sulle tappe: scegli prima <strong>quanti giorni reali</strong> hai.
+            Poi costruisci tutto intorno (e non il contrario).
+          </p>
+          <div style="margin-top:12px;">
+            <a class="btn primary" href="../itinerari/index.html">Vai agli itinerari →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer_grid">
+      <div><strong>Egitto Casa Mia</strong><div class="small" style="margin-top:6px;">Guida pratica, scritta come la direi a un amico.</div></div>
+      <div class="small">Alcune immagini: Unsplash / Pexels.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
