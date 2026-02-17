@@ -1,20 +1,12 @@
-// Simple mobile menu
-(() => {
-  const btn = document.getElementById("menuBtn");
-  const nav = document.getElementById("siteNav");
-  if (!btn || !nav) return;
+// Mobile menu toggle (semplice, pulito)
+(function () {
+  const btn = document.querySelector('[data-burger]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  if (!btn || !menu) return;
 
-  btn.addEventListener("click", () => {
-    const open = nav.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
-  // Close on link click (mobile)
-  nav.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      btn.setAttribute("aria-expanded", "false");
-    });
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
   });
 })();
-
