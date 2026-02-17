@@ -3,15 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Destinazioni — EGITTOCASAMIA</title>
   <meta name="description" content="Cairo, Luxor, Aswan, Mar Rosso, Alessandria. Dove andare e perché." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#F3F2ED" />
+
+  <link rel="canonical" href="https://egittocasamia.it/destinazioni/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
 <body>
   <header class="top">
     <a class="brand" href="/">EGITTOCASAMIA</a>
-    <nav class="nav">
+
+    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Navigazione principale">
       <a href="/organizzare-il-viaggio/">Organizzare</a>
       <a href="/destinazioni/">Destinazioni</a>
       <a href="/itinerari/">Itinerari</a>
@@ -23,35 +38,35 @@
     <section class="hero">
       <h1>Destinazioni</h1>
       <p class="lead">
-        L’Egitto non è solo piramidi.<br>
-        È città enormi, templi nel deserto, mare chiaro e Mediterraneo calmo.
+        L’Egitto è più grande di quanto sembra.<br>
+        E ogni zona ha una vibe diversa.
       </p>
     </section>
 
     <section class="grid">
       <a class="card" href="#">
         <h2>Cairo</h2>
-        <p>Caotica, enorme, viva. Ti spiazza e poi ti conquista.</p>
+        <p>Caotica, enorme, viva. Ti spiazza e poi ti prende.</p>
       </a>
 
       <a class="card" href="#">
         <h2>Luxor</h2>
-        <p>Templi, storia, silenzio. Qui l’Egitto antico si sente davvero.</p>
+        <p>Templi, storia, silenzio. Qui l’antico si sente davvero.</p>
       </a>
 
       <a class="card" href="#">
         <h2>Aswan</h2>
-        <p>Più lenta, più calda, più rilassata. Perfetta se vuoi respirare.</p>
+        <p>Più lenta, più calda, più rilassata. Perfetta per respirare.</p>
       </a>
 
       <a class="card" href="#">
         <h2>Mar Rosso</h2>
-        <p>Mare chiaro, resort, snorkeling. Zero caos, solo acqua.</p>
+        <p>Mare chiaro, snorkeling, relax. Se vuoi staccare sul serio.</p>
       </a>
 
       <a class="card" href="#">
         <h2>Alessandria</h2>
-        <p>Vibe mediterranea, meno turistica, molto più vera.</p>
+        <p>Mediterraneo vero. Meno cartolina, più vita.</p>
       </a>
 
       <a class="card" href="#">
@@ -60,5 +75,19 @@
       </a>
     </section>
   </main>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    btn.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.querySelectorAll(".nav a").forEach(a => {
+      a.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
 </body>
 </html>
