@@ -2,42 +2,96 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dentro l’Egitto — EGITTOCASAMIA</title>
-  <meta name="description" content="Vita quotidiana, cultura, luoghi + cibo collegato. Micro-storie concrete." />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dentro l’Egitto — Egitto Casa Mia</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="container top-inner">
-      <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> EGITTOCASAMIA</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
-      <nav class="nav" id="siteNav" aria-label="Navigazione principale">
-        <a href="/organizzare-il-viaggio/">Organizzare</a>
-        <a href="/destinazioni/">Destinazioni</a>
-        <a href="/itinerari/">Itinerari</a>
-        <a href="/dentro-legitto/">Dentro l’Egitto</a>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="../index.html"><span class="dot"></span><span>EGITTO CASA MIA</span></a>
+      <nav class="nav_links">
+        <a href="../organizzare-il-viaggio/index.html">Organizzare</a>
+        <a href="../destinazioni/index.html">Destinazioni</a>
+        <a href="../itinerari/index.html">Itinerari</a>
+        <a href="../dentro-legitto/index.html">Dentro l’Egitto</a>
       </nav>
-    </div>
-  </header>
-
-  <main class="page">
-    <div class="container">
-      <h1>Dentro l’Egitto</h1>
-      <p>
-        Qui non facciamo il diario. Non facciamo il food blog.
-        Raccontiamo pezzi di vita reale: luoghi, cultura, e cibo collegato — quando serve.
-      </p>
-
-      <div class="note">
-        Struttura dei pezzi (sempre uguale, sempre pulita):
-        contesto • cosa vedi • cosa succede davvero • cosa mangi • dettagli pratici (brevi) • chiusura
+      <div class="nav_cta">
+        <a class="btn" href="../index.html#sezioni">Home</a>
+        <a class="btn primary" href="../index.html#contatti">Scrivimi</a>
       </div>
-
-      <p class="sig">— EGITTOCASAMIA</p>
+      <button class="burger" type="button" data-burger aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </main>
 
-  <script src="/assets/js/main.js"></script>
+    <div class="mobile_menu" data-mobile-menu>
+      <a href="../organizzare-il-viaggio/index.html">Organizzare il viaggio</a>
+      <a href="../destinazioni/index.html">Destinazioni</a>
+      <a href="../itinerari/index.html">Itinerari</a>
+      <a href="../dentro-legitto/index.html">Dentro l’Egitto</a>
+      <div class="row">
+        <a class="btn" href="../index.html#sezioni" style="width:100%">Home</a>
+        <a class="btn primary" href="../index.html#contatti" style="width:100%">Scrivimi</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="hero_card" style="margin-top:14px;">
+      <img src="../assets/images/dentro_egitto_cairo.jpg" alt="Cairo, luce del giorno" />
+      <div class="hero_overlay"></div>
+      <div class="hero_content">
+        <div class="hero_text">
+          <div class="badge">🌆 Dentro l’Egitto</div>
+          <h1>Le cose che ti fanno stare tranquillo.</h1>
+          <p class="hero_p">
+            Piccole regole non scritte: come muoverti, come parlare, come gestire taxi e mance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="split">
+        <div class="panel">
+          <h3>Dritte pratiche</h3>
+          <ul class="list">
+            <li><strong>Taxi e spostamenti:</strong> concorda prima o usa app quando ha senso.</li>
+            <li><strong>Mance:</strong> piccoli importi, con naturalezza. Ti semplifica la vita.</li>
+            <li><strong>Contrattare:</strong> con sorriso e calma. È normale, non è un duello.</li>
+            <li><strong>Abbigliamento:</strong> adattati al contesto (città/templi ≠ spiaggia).</li>
+            <li><strong>Foto e persone:</strong> chiedi se vuoi fotografare qualcuno da vicino.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Se vuoi un consiglio su misura</h3>
+          <p>
+            Scrivimi: <strong>giorni</strong>, <strong>periodo</strong>, <strong>budget indicativo</strong> e cosa ti interessa di più.
+            Ti rispondo con una proposta concreta.
+          </p>
+          <div style="margin-top:12px;">
+            <a class="btn primary" href="../index.html#contatti">Vai ai contatti →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer_grid">
+      <div><strong>Egitto Casa Mia</strong><div class="small" style="margin-top:6px;">Dentro l’Egitto: cose vere, dette bene.</div></div>
+      <div class="small">Alcune immagini: Unsplash / Pexels.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
