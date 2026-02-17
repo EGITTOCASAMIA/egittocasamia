@@ -4,19 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>EGITTOCASAMIA</title>
-  <meta name="description" content="EGITTOCASAMIA. Se stai pensando all’Egitto, inizia da qui. È bellissimo. A volte caotico. Molto più vario di quanto sembra." />
+  <title>EGITTOCASAMIA — Guida pratica per vivere l’Egitto</title>
+  <meta name="description" content="Se stai pensando all’Egitto, inizia da qui. È bellissimo. A volte caotico. Molto più vario di quanto sembra." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0b0b0b" />
-
+  <meta name="theme-color" content="#F3F2ED" />
   <link rel="canonical" href="https://egittocasamia.it/" />
-
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
@@ -24,7 +20,12 @@
 <body>
   <header class="top">
     <a class="brand" href="/">EGITTOCASAMIA</a>
-    <nav class="nav">
+
+    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Navigazione principale">
       <a href="/organizzare-il-viaggio/">Organizzare</a>
       <a href="/destinazioni/">Destinazioni</a>
       <a href="/itinerari/">Itinerari</a>
@@ -44,7 +45,7 @@
     <section class="grid">
       <a class="card" href="/organizzare-il-viaggio/">
         <h2>Organizzare il viaggio</h2>
-        <p>Visto, periodo giusto, costi, sim, spostamenti. Le basi, fatte bene.</p>
+        <p>Visto, periodo giusto, costi, sim e spostamenti. Le basi, fatte bene.</p>
       </a>
 
       <a class="card" href="/destinazioni/">
@@ -59,7 +60,7 @@
 
       <a class="card" href="/dentro-legitto/">
         <h2>Dentro l’Egitto</h2>
-        <p>Cose vere: posti, cibo, momenti. Piccoli pezzi che ti mettono nella vibe.</p>
+        <p>Posti, cibo, momenti. Piccoli pezzi che ti mettono nella vibe.</p>
       </a>
     </section>
 
@@ -69,7 +70,23 @@
   </main>
 
   <script>
+    // anno
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // menu mobile
+    const btn = document.getElementById("menuBtn");
+    btn.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // chiudi menu quando clicchi un link
+    document.querySelectorAll(".nav a").forEach(a => {
+      a.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
   </script>
 </body>
 </html>
