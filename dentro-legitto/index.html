@@ -3,85 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>Dentro l’Egitto — EGITTOCASAMIA</title>
-  <meta name="description" content="Posti, cibo, momenti. L’Egitto visto da dentro, a pezzi brevi." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#F3F2ED" />
-
-  <link rel="canonical" href="https://egittocasamia.it/dentro-legitto/" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Vita quotidiana, cultura, luoghi + cibo collegato. Micro-storie concrete." />
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
-
 <body>
   <header class="top">
-    <a class="brand" href="/">EGITTOCASAMIA</a>
-
-    <button class="menu-btn" type="button" aria-label="Apri menu" aria-expanded="false" id="menuBtn">
-      <span></span>
-    </button>
-
-    <nav class="nav" aria-label="Navigazione principale">
-      <a href="/organizzare-il-viaggio/">Organizzare</a>
-      <a href="/destinazioni/">Destinazioni</a>
-      <a href="/itinerari/">Itinerari</a>
-      <a href="/dentro-legitto/">Dentro l’Egitto</a>
-    </nav>
+    <div class="container top-inner">
+      <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> EGITTOCASAMIA</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="nav" id="siteNav" aria-label="Navigazione principale">
+        <a href="/organizzare-il-viaggio/">Organizzare</a>
+        <a href="/destinazioni/">Destinazioni</a>
+        <a href="/itinerari/">Itinerari</a>
+        <a href="/dentro-legitto/">Dentro l’Egitto</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
+  <main class="page">
+    <div class="container">
       <h1>Dentro l’Egitto</h1>
-      <p class="lead">
-        Piccole cose che ti fanno capire un posto.<br>
-        Niente liste infinite. Solo momenti.
+      <p>
+        Qui non facciamo il diario. Non facciamo il food blog.
+        Raccontiamo pezzi di vita reale: luoghi, cultura, e cibo collegato — quando serve.
       </p>
-    </section>
 
-    <section class="grid">
-      <a class="card" href="#">
-        <h2>Koshary a Tahrir</h2>
-        <p>Perché provarlo proprio lì cambia tutto.</p>
-      </a>
+      <div class="note">
+        Struttura dei pezzi (sempre uguale, sempre pulita):
+        contesto • cosa vedi • cosa succede davvero • cosa mangi • dettagli pratici (brevi) • chiusura
+      </div>
 
-      <a class="card" href="#">
-        <h2>Ramadan al Cairo</h2>
-        <p>Cosa succede davvero quando il sole scende.</p>
-      </a>
-
-      <a class="card" href="#">
-        <h2>Una sera ad Alessandria</h2>
-        <p>Mare, vento e zero fretta.</p>
-      </a>
-
-      <a class="card" href="#">
-        <h2>Il tè egiziano</h2>
-        <p>Più forte di quello che pensi.</p>
-      </a>
-    </section>
-
-    <div class="signature">
-      <span class="dash">—</span> EGITTOCASAMIA
+      <p class="sig">— EGITTOCASAMIA</p>
     </div>
   </main>
 
-  <script>
-    const btn = document.getElementById("menuBtn");
-    btn.addEventListener("click", () => {
-      const open = document.body.classList.toggle("nav-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    document.querySelectorAll(".nav a").forEach(a => {
-      a.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-  </script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
