@@ -1,82 +1,97 @@
-(() => {
-  // Mobile menu
-  const toggle = document.querySelector("[data-nav-toggle]");
-  const nav = document.querySelector("[data-nav]");
+(function () {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  // Mobile menu
+  const burger = document.querySelector(".burger");
+  const mobile = document.querySelector(".mobile");
+
+  function closeMobile() {
+    if (!burger || !mobile) return;
+    burger.setAttribute("aria-expanded", "false");
+    mobile.style.display = "none";
+    mobile.setAttribute("aria-hidden", "true");
+  }
+
+  function openMobile() {
+    if (!burger || !mobile) return;
+    burger.setAttribute("aria-expanded", "true");
+    mobile.style.display = "block";
+    mobile.setAttribute("aria-hidden", "false");
+  }
+
+  if (burger && mobile) {
+    closeMobile();
+    burger.addEventListener("click", () => {
+      const expanded = burger.getAttribute("aria-expanded") === "true";
+      expanded ? closeMobile() : openMobile();
     });
 
-    // Close menu when clicking a link (mobile)
-    nav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+    // close when clicking a link
+    mobile.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => closeMobile());
+    });
+
+    // close on resize to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 980) closeMobile();
     });
   }
 
-  // Smooth scroll for internal anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (!id || id === "#") return;
-      const el = document.querySelector(id);
-      if (!el) return;
-      e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-
-  // Filtering + search
-  const cards = Array.from(document.querySelectorAll("[data-tags]"));
-  const filters = Array.from(document.querySelectorAll("[data-filter]"));
-  const searchInput = document.getElementById("searchInput");
+  // Search + filters (client-side)
+  const q = document.getElementById("q");
   const searchBtn = document.getElementById("searchBtn");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const filterButtons = Array.from(document.querySelectorAll(".filter"));
 
   let activeFilter = "all";
-  let query = "";
 
   function normalize(s) {
     return (s || "").toLowerCase().trim();
   }
 
+  function matchesFilter(card) {
+    if (activeFilter === "all") return true;
+    const tags = normalize(card.getAttribute("data-tags"));
+    return tags.includes(activeFilter);
+  }
+
+  function matchesQuery(card, query) {
+    if (!query) return true;
+    const title = normalize(card.getAttribute("data-title"));
+    const text = normalize(card.innerText);
+    return title.includes(query) || text.includes(query);
+  }
+
   function apply() {
-    const q = normalize(query);
-
-    cards.forEach(card => {
-      const tags = normalize(card.getAttribute("data-tags"));
-      const text = normalize(card.innerText);
-
-      const matchFilter = activeFilter === "all" ? true : tags.includes(activeFilter);
-      const matchQuery = q.length === 0 ? true : (text.includes(q) || tags.includes(q));
-
-      card.classList.toggle("is-hidden", !(matchFilter && matchQuery));
+    const query = normalize(q?.value);
+    cards.forEach((card) => {
+      const ok = matchesFilter(card) && matchesQuery(card, query);
+      card.style.display = ok ? "" : "none";
     });
   }
 
-  filters.forEach(btn => {
+  if (q) {
+    q.addEventListener("input", apply);
+    q.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") apply();
+    });
+  }
+  if (searchBtn) searchBtn.addEventListener("click", apply);
+
+  filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      filters.forEach(b => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
       activeFilter = btn.getAttribute("data-filter") || "all";
+
+      filterButtons.forEach((b) => b.classList.remove("filter--active"));
+      if (activeFilter !== "all") btn.classList.add("filter--active");
+
+      // If reset
+      if (activeFilter === "all") {
+        filterButtons.forEach((b) => b.classList.remove("filter--active"));
+      }
+
       apply();
     });
   });
-
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      query = searchInput.value;
-      apply();
-    });
-  }
-
-  if (searchBtn) {
-    searchBtn.addEventListener("click", () => {
-      query = searchInput ? searchInput.value : "";
-      apply();
-    });
-  }
 })();
