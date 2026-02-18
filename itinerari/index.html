@@ -3,115 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cosa fare — Egitto Casa Mia</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
+  <title>Idee in giornata — Egitto Casa Mia</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <nav class="nav" aria-label="Navigazione principale">
-        <a class="brand" href="../index.html">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span>EGITTO CASA MIA</span>
-        </a>
-
-        <div class="nav-links">
-          <a href="../tipi/index.html">Tipi di viaggio</a>
-          <a href="../destinazioni/index.html">Destinazioni</a>
-        </div>
-
-        <div class="nav-cta">
-          <a class="pill" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a class="pill pill--gold" href="mailto:egittocasamia@gmail.com">Email</a>
-          <button class="burger" type="button" data-burger>Menu</button>
-        </div>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="../index.html">
+        <span class="brand-dot"></span><span>EGITTO CASA MIA</span>
+      </a>
+      <nav class="navlinks">
+        <a href="../index.html#tipi">Tipi di viaggio</a>
+        <a href="../index.html#tappe">Principali tappe</a>
+        <a href="../index.html#cosa-fare">Cosa fare</a>
       </nav>
-
-      <div class="mobile-drawer" data-drawer>
-        <a href="../index.html">Home</a>
-        <a href="../tipi/index.html">Tipi di viaggio</a>
-        <a href="../destinazioni/index.html">Destinazioni</a>
+      <div class="nav-ctas">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill gold" href="mailto:itsagrogpt2@gmail.com">Email</a>
       </div>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <p class="kicker">Cosa fare</p>
-        <h1 class="h1">Idee in giornata</h1>
-        <p class="lead">Mini-itinerari: semplici, combinabili.</p>
-      </div>
+      <p class="kicker">Cosa fare</p>
+      <h2>Idee in giornata</h2>
+      <p style="margin-top:10px;">Mini-itinerari: semplici, combinabili.</p>
 
-      <div class="grid grid-3">
-        <div class="card" id="cairo-giornata">
-          <div class="card-media"><img src="../assets/images/dentro_egitto_cairo.jpg" alt="Cairo in 1 giorno"></div>
+      <div style="height:18px;"></div>
+
+      <div class="grid cols-3">
+        <article id="cairo-1-giorno" class="card">
+          <img class="card-media" src="../assets/images/cairo_1gg.jpg" alt="Cairo — 1 giorno" />
           <div class="card-body">
-            <h3 class="card-title">Cairo — 1 giorno</h3>
+            <div class="card-title">Cairo — 1 giorno</div>
             <p class="card-text">Una traccia chiara.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="card" id="alessandria-giornata">
-          <div class="card-media"><img src="../assets/images/alessandria.jpg" alt="Alessandria in giornata"></div>
+        <article id="alessandria-giornata" class="card">
+          <img class="card-media" src="../assets/images/alessandria.jpg" alt="Alessandria — in giornata" />
           <div class="card-body">
-            <h3 class="card-title">Alessandria — in giornata</h3>
+            <div class="card-title">Alessandria — in giornata</div>
             <p class="card-text">Passeggiata + soste.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="card" id="luxor-giornata">
-          <div class="card-media"><img src="../assets/images/destinazioni_luxor.jpg" alt="Luxor in 1 giorno"></div>
+        <article id="luxor-1-giorno" class="card">
+          <img class="card-media" src="../assets/images/luxor1gg.jpg" alt="Luxor — 1 giorno" />
           <div class="card-body">
-            <h3 class="card-title">Luxor — 1 giorno</h3>
+            <div class="card-title">Luxor — 1 giorno</div>
             <p class="card-text">Templi e tramonto.</p>
           </div>
-        </div>
-
-        <div class="card" id="dahab-giornata">
-          <div class="card-media"><img src="../assets/images/dahab_sinai.jpg" alt="Dahab"></div>
-          <div class="card-body">
-            <h3 class="card-title">Dahab — giornata lenta</h3>
-            <p class="card-text">Mare, pausa.</p>
-          </div>
-        </div>
-
-        <div class="card" id="sinai-giornata">
-          <div class="card-media"><img src="../assets/images/sinai_spiaggia.jpg" alt="Sinai"></div>
-          <div class="card-body">
-            <h3 class="card-title">Sinai — un giorno</h3>
-            <p class="card-text">Mare e silenzio.</p>
-          </div>
-        </div>
-
-        <div class="card" id="northcoast-giornata">
-          <div class="card-media"><img src="../assets/images/north%20coast.jpg" alt="North Coast"></div>
-          <div class="card-body">
-            <h3 class="card-title">North Coast — un giorno</h3>
-            <p class="card-text">Mare mediterraneo.</p>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
-        <div class="footer-links">
-          <a href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a href="mailto:egittocasamia@gmail.com">Email</a>
-        </div>
+    <div class="container footer-row">
+      <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill" href="mailto:itsagrogpt2@gmail.com">Email</a>
       </div>
     </div>
   </footer>
-
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
