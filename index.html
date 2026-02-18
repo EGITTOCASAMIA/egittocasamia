@@ -1,191 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Egitto Casa Mia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Guida indipendente: tappe chiare, idee in giornata, itinerari da costruire con calma." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span>EGITTO CASA MIA</span>
+      </a>
 
-<header class="header">
-  <div class="container nav">
-    <div class="logo">
-      <span class="dot"></span>
-      EGITTO CASA MIA
+      <nav class="navlinks">
+        <a href="#tipi">Tipi di viaggio</a>
+        <a href="#tappe">Principali tappe</a>
+        <a href="#cosa-fare">Cosa fare</a>
+      </nav>
+
+      <div class="nav-ctas">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill gold" href="mailto:itsagrogpt2@gmail.com">Email</a>
+      </div>
     </div>
+  </header>
 
-    <nav>
-      <a href="tipi/index.html">Tipi di viaggio</a>
-      <a href="#tappe">Principali tappe</a>
-      <a href="#idee">Cosa fare</a>
-    </nav>
+  <!-- HERO FULL WIDTH -->
+  <section class="hero">
+    <div class="hero-bleed">
+      <div class="hero-media">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <p class="kicker">Guida indipendente</p>
+            <h1 class="hero-title">Egitto.<br/>Da capire prima di partire.</h1>
+            <p class="hero-sub">Destinazioni, tempi e idee per costruire il tuo viaggio con calma.</p>
 
-    <div class="nav-cta">
-      <a href="https://instagram.com/egittocasamia" target="_blank" class="btn-outline">Instagram</a>
-      <a href="mailto:egittocasamia@gmail.com" class="btn-gold">Email</a>
+            <div class="btn-row">
+              <a class="btn primary" href="#tipi">Inizia da qui</a>
+              <a class="btn" href="destinazioni/index.html">Vedi tutte le destinazioni</a>
+              <a class="btn" href="itinerari/index.html">Vedi tutte le idee</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</header>
+  </section>
 
-<!-- HERO -->
-
-<section class="hero">
-  <img src="assets/images/hero.jpg" alt="Egitto">
-  <div class="hero-overlay">
+  <!-- TIPI DI VIAGGIO -->
+  <section id="tipi" class="section">
     <div class="container">
-      <h1>Egitto.<br>Da capire prima di partire.</h1>
-      <p>Destinazioni, tempi e idee per costruire il tuo viaggio con calma.</p>
-      <a href="#tappe" class="btn-primary">Inizia da qui</a>
+      <h2>Scegli uno stile</h2>
+      <p style="margin-top:10px;">Quattro punti di partenza. Pagine dedicate, poi le tappe.</p>
+
+      <div style="height:18px;"></div>
+
+      <div class="grid cols-4">
+        <a class="card" href="tipi/templi-e-storia.html">
+          <img class="card-media" src="assets/images/destinazioni_luxor.jpg" alt="Templi & Storia" />
+          <div class="card-body">
+            <div class="card-title">Templi &amp; Storia</div>
+            <p class="card-text">Tappe forti, ordine chiaro.</p>
+          </div>
+        </a>
+
+        <a class="card" href="tipi/citta-e-sapori.html">
+          <img class="card-media" src="assets/images/dentro_egitto_cairo.jpg" alt="Città & Sapori" />
+          <div class="card-body">
+            <div class="card-title">Città &amp; Sapori</div>
+            <p class="card-text">Quartieri, mercati, cibo.</p>
+          </div>
+        </a>
+
+        <a class="card" href="tipi/deserto-e-avventura.html">
+          <img class="card-media" src="assets/images/deserto_avventura.jpg" alt="Deserto & Avventura" />
+          <div class="card-body">
+            <div class="card-title">Deserto &amp; Avventura</div>
+            <p class="card-text">Oasi, strade, natura.</p>
+          </div>
+        </a>
+
+        <a class="card" href="tipi/mare-e-relax.html">
+          <img class="card-media" src="assets/images/dahab_sinai.jpg" alt="Mare & Relax" />
+          <div class="card-body">
+            <div class="card-title">Mare &amp; Relax</div>
+            <p class="card-text">Luce, acqua, giorni lenti.</p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TIPI DI VIAGGIO -->
+  <!-- PRINCIPALI TAPPE -->
+  <section id="tappe" class="section" style="background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="container">
+      <p class="kicker">Principali tappe</p>
+      <h2>La mappa base</h2>
+      <p style="margin-top:10px;">Poche tappe per orientarti. Poi approfondiamo, una guida alla volta.</p>
 
-<section class="section">
-  <div class="container">
-    <h2>Scegli uno stile</h2>
-    <p class="section-sub">Quattro punti di partenza. Pagine dedicate, poi le tappe.</p>
+      <div style="height:18px;"></div>
 
-    <div class="card-grid">
+      <div class="grid cols-4">
+        <a class="card" href="destinazioni/index.html#cairo">
+          <img class="card-media" src="assets/images/dentro_egitto_cairooos.jpg" alt="Cairo" />
+          <div class="card-body">
+            <div class="card-title">Cairo</div>
+            <p class="card-text">Piramidi, musei, vita.</p>
+          </div>
+        </a>
 
-      <div class="card">
-        <img src="assets/images/dentro_legitto.jpg" alt="Templi e storia">
-        <div class="card-body">
-          <h3>Templi & Storia</h3>
-          <p>Tappe forti, ordine chiaro.</p>
-        </div>
+        <a class="card" href="destinazioni/index.html#alessandria">
+          <img class="card-media" src="assets/images/alessandria.jpg" alt="Alessandria d'Egitto" />
+          <div class="card-body">
+            <div class="card-title">Alessandria</div>
+            <p class="card-text">Mediterraneo, lungomare.</p>
+          </div>
+        </a>
+
+        <a class="card" href="destinazioni/index.html#luxor">
+          <img class="card-media" src="assets/images/destinazioni_luxor.jpg" alt="Luxor" />
+          <div class="card-body">
+            <div class="card-title">Luxor</div>
+            <p class="card-text">Templi sul Nilo.</p>
+          </div>
+        </a>
+
+        <a class="card" href="destinazioni/index.html#north-coast">
+          <img class="card-media" src="assets/images/north%20coast.jpg" alt="North Coast" />
+          <div class="card-body">
+            <div class="card-title">North Coast</div>
+            <p class="card-text">Estate sul Mediterraneo, case sul mare.</p>
+          </div>
+        </a>
       </div>
 
-      <div class="card">
-        <img src="assets/images/dentro_egitto_cairo.jpg" alt="Città e sapori">
-        <div class="card-body">
-          <h3>Città & Sapori</h3>
-          <p>Quartieri, mercati, cibo.</p>
-        </div>
+      <div class="block-cta">
+        <a class="btn primary" href="destinazioni/index.html">Vedi tutte le destinazioni</a>
       </div>
-
-      <div class="card">
-        <img src="assets/images/deserto_avventura.jpg" alt="Deserto e avventura">
-        <div class="card-body">
-          <h3>Deserto & Avventura</h3>
-          <p>Oasi, strade, natura.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/images/sinai_spiaggia.jpg" alt="Mare e relax">
-        <div class="card-body">
-          <h3>Mare & Relax</h3>
-          <p>Luce, acqua, giorni lenti.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PRINCIPALI TAPPE -->
+  <!-- COSA FARE -->
+  <section id="cosa-fare" class="section">
+    <div class="container">
+      <p class="kicker">Cosa fare</p>
+      <h2>Idee in giornata</h2>
+      <p style="margin-top:10px;">Mini-itinerari: semplici, combinabili.</p>
 
-<section class="section" id="tappe">
-  <div class="container">
-    <h2>La mappa base</h2>
-    <p class="section-sub">Poche tappe per orientarti. Poi approfondiamo.</p>
+      <div style="height:18px;"></div>
 
-    <div class="card-grid">
+      <div class="grid cols-3">
+        <a class="card" href="itinerari/index.html#cairo-1-giorno">
+          <img class="card-media" src="assets/images/cairo_1gg.jpg" alt="Cairo — 1 giorno" />
+          <div class="card-body">
+            <div class="card-title">Cairo — 1 giorno</div>
+            <p class="card-text">Una traccia chiara.</p>
+          </div>
+        </a>
 
-      <div class="card">
-        <img src="assets/images/dentro_egitto_cairooos.jpg" alt="Cairo">
-        <div class="card-body">
-          <h3>Cairo</h3>
-          <p>Piramidi, musei, vita.</p>
-        </div>
+        <a class="card" href="itinerari/index.html#alessandria-giornata">
+          <img class="card-media" src="assets/images/alessandria.jpg" alt="Alessandria — in giornata" />
+          <div class="card-body">
+            <div class="card-title">Alessandria — in giornata</div>
+            <p class="card-text">Passeggiata + soste.</p>
+          </div>
+        </a>
+
+        <a class="card" href="itinerari/index.html#luxor-1-giorno">
+          <img class="card-media" src="assets/images/luxor1gg.jpg" alt="Luxor — 1 giorno" />
+          <div class="card-body">
+            <div class="card-title">Luxor — 1 giorno</div>
+            <p class="card-text">Templi e tramonto.</p>
+          </div>
+        </a>
       </div>
 
-      <div class="card">
-        <img src="assets/images/alessandria.jpg" alt="Alessandria">
-        <div class="card-body">
-          <h3>Alessandria</h3>
-          <p>Mediterraneo, lungomare.</p>
-        </div>
+      <div class="block-cta">
+        <a class="btn primary" href="itinerari/index.html">Vedi tutte le idee</a>
       </div>
-
-      <div class="card">
-        <img src="assets/images/destinazioni_luxor.jpg" alt="Luxor">
-        <div class="card-body">
-          <h3>Luxor</h3>
-          <p>Templi sul Nilo.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/images/north%20coast.jpg" alt="North Coast">
-        <div class="card-body">
-          <h3>North Coast</h3>
-          <p>Estate sul Mediterraneo, case sul mare.</p>
-        </div>
-      </div>
-
     </div>
+  </section>
 
-    <a href="destinazioni/index.html" class="btn-primary">Vedi tutte le destinazioni</a>
-
-  </div>
-</section>
-
-<!-- IDEE IN GIORNATA -->
-
-<section class="section" id="idee">
-  <div class="container">
-    <h2>Idee in giornata</h2>
-    <p class="section-sub">Mini-itinerari semplici, combinabili.</p>
-
-    <div class="card-grid">
-
-      <div class="card">
-        <img src="assets/images/cairo_1gg.jpg" alt="Cairo 1 giorno">
-        <div class="card-body">
-          <h3>Cairo — 1 giorno</h3>
-          <p>Una traccia chiara.</p>
-        </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill" href="mailto:itsagrogpt2@gmail.com">Email</a>
       </div>
-
-      <div class="card">
-        <img src="assets/images/alessandria.jpg" alt="Alessandria in giornata">
-        <div class="card-body">
-          <h3>Alessandria — in giornata</h3>
-          <p>Passeggiata + soste.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/images/luxor1gg.jpg" alt="Luxor 1 giorno">
-        <div class="card-body">
-          <h3>Luxor — 1 giorno</h3>
-          <p>Templi e tramonto.</p>
-        </div>
-      </div>
-
     </div>
-
-    <a href="itinerari/index.html" class="btn-primary">Vedi tutte le idee</a>
-
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <p><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</p>
-    <div class="footer-links">
-      <a href="https://instagram.com/egittocasamia" target="_blank">Instagram</a>
-      <a href="mailto:egittocasamia@gmail.com">Email</a>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
-
+  </footer>
 </body>
 </html>
+
