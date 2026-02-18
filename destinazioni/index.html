@@ -4,130 +4,79 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Destinazioni — Egitto Casa Mia</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <nav class="nav" aria-label="Navigazione principale">
-        <a class="brand" href="../index.html">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span>EGITTO CASA MIA</span>
-        </a>
-
-        <div class="nav-links">
-          <a href="../index.html#tipi">Tipi di viaggio</a>
-          <a href="../itinerari/index.html">Cosa fare</a>
-        </div>
-
-        <div class="nav-cta">
-          <a class="pill" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a class="pill pill--gold" href="mailto:egittocasamia@gmail.com">Email</a>
-          <button class="burger" type="button" data-burger>Menu</button>
-        </div>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="../index.html">
+        <span class="brand-dot"></span><span>EGITTO CASA MIA</span>
+      </a>
+      <nav class="navlinks">
+        <a href="../index.html#tipi">Tipi di viaggio</a>
+        <a href="../index.html#tappe">Principali tappe</a>
+        <a href="../index.html#cosa-fare">Cosa fare</a>
       </nav>
-
-      <div class="mobile-drawer" data-drawer>
-        <a href="../index.html">Home</a>
-        <a href="../tipi/index.html">Tipi di viaggio</a>
-        <a href="../itinerari/index.html">Cosa fare</a>
+      <div class="nav-ctas">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill gold" href="mailto:itsagrogpt2@gmail.com">Email</a>
       </div>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <p class="kicker">Destinazioni</p>
-        <h1 class="h1">La mappa base</h1>
-        <p class="lead">Poche tappe, chiare. Poi approfondiamo con guide complete.</p>
-      </div>
+      <p class="kicker">Destinazioni</p>
+      <h2>Le tappe</h2>
+      <p style="margin-top:10px;">Selezione essenziale. Poi aggiungiamo guide complete.</p>
 
-      <div class="grid grid-4">
-        <div class="card" id="cairo">
-          <div class="card-media"><img src="../assets/images/dentro_egitto_cairo.jpg" alt="Cairo"></div>
+      <div style="height:18px;"></div>
+
+      <div class="grid cols-4">
+        <article id="cairo" class="card">
+          <img class="card-media" src="../assets/images/dentro_egitto_cairooos.jpg" alt="Cairo" />
           <div class="card-body">
-            <h3 class="card-title">Cairo</h3>
+            <div class="card-title">Cairo</div>
             <p class="card-text">Piramidi, musei, vita.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="card" id="alessandria">
-          <div class="card-media"><img src="../assets/images/alessandria.jpg" alt="Alessandria d'Egitto"></div>
+        <article id="alessandria" class="card">
+          <img class="card-media" src="../assets/images/alessandria.jpg" alt="Alessandria d'Egitto" />
           <div class="card-body">
-            <h3 class="card-title">Alessandria</h3>
+            <div class="card-title">Alessandria</div>
             <p class="card-text">Mediterraneo, lungomare.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="card" id="luxor">
-          <div class="card-media"><img src="../assets/images/destinazioni_luxor.jpg" alt="Luxor"></div>
+        <article id="luxor" class="card">
+          <img class="card-media" src="../assets/images/destinazioni_luxor.jpg" alt="Luxor" />
           <div class="card-body">
-            <h3 class="card-title">Luxor</h3>
+            <div class="card-title">Luxor</div>
             <p class="card-text">Templi sul Nilo.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="card" id="northcoast">
-          <div class="card-media"><img src="../assets/images/north%20coast.jpg" alt="North Coast"></div>
+        <article id="north-coast" class="card">
+          <img class="card-media" src="../assets/images/north%20coast.jpg" alt="North Coast" />
           <div class="card-body">
-            <h3 class="card-title">North Coast</h3>
+            <div class="card-title">North Coast</div>
             <p class="card-text">Estate sul Mediterraneo, case sul mare.</p>
           </div>
-        </div>
-
-        <div class="card" id="dahab">
-          <div class="card-media"><img src="../assets/images/dahab_sinai.jpg" alt="Dahab"></div>
-          <div class="card-body">
-            <h3 class="card-title">Dahab</h3>
-            <p class="card-text">Mare, luce.</p>
-          </div>
-        </div>
-
-        <div class="card" id="sinai">
-          <div class="card-media"><img src="../assets/images/sinai_spiaggia.jpg" alt="Sinai"></div>
-          <div class="card-body">
-            <h3 class="card-title">Sinai</h3>
-            <p class="card-text">Montagne e spiagge.</p>
-          </div>
-        </div>
-
-        <div class="card" id="nilo">
-          <div class="card-media"><img src="../assets/images/itinerari_nilo.jpg" alt="Nilo"></div>
-          <div class="card-body">
-            <h3 class="card-title">Nilo</h3>
-            <p class="card-text">Templi lungo il fiume.</p>
-          </div>
-        </div>
-
-        <div class="card" id="aswan">
-          <div class="card-media"><img src="../assets/images/itinerari.jpg" alt="Aswan"></div>
-          <div class="card-body">
-            <h3 class="card-title">Aswan</h3>
-            <p class="card-text">Feluca, luce.</p>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
-        <div class="footer-links">
-          <a href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a href="mailto:egittocasamia@gmail.com">Email</a>
-        </div>
+    <div class="container footer-row">
+      <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill" href="mailto:itsagrogpt2@gmail.com">Email</a>
       </div>
     </div>
   </footer>
-
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
