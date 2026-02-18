@@ -2,363 +2,317 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Egitto Casa Mia: destinazioni, itinerari e guida pratica per viaggiatori curiosi (anche in solo)." />
-  <title>Egitto Casa Mia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Egitto Casa Mia — guida pratica per viaggiare (anche da soli)</title>
+  <meta name="description" content="Egitto Casa Mia: destinazioni, itinerari e dritte chiare per viaggiare in Egitto (anche da soli). Cairo, Luxor, Nilo, Sinai, Dahab." />
 
-  <!-- Fonts -->
+  <!-- CSS (ATTENZIONE al path: deve essere ESATTO) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Preconnect + Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Background (blurred hero) -->
-  <div class="bg-hero" aria-hidden="true"></div>
-
   <!-- Top bar -->
-  <header class="topbar">
+  <header class="topbar" id="top">
     <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="Egitto Casa Mia">
-        <span class="brand__dot"></span>
+      <a class="brand" href="#top" aria-label="Home Egitto Casa Mia">
+        <span class="brand__dot" aria-hidden="true"></span>
         <span class="brand__name">EGITTO CASA MIA</span>
       </a>
 
-      <button class="navToggle" aria-label="Apri menu" aria-expanded="false" data-nav-toggle>
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" data-nav>
+      <nav class="nav" aria-label="Navigazione principale">
         <a href="#inizia" class="nav__link">Inizia da qui</a>
         <a href="#destinazioni" class="nav__link">Destinazioni</a>
         <a href="#itinerari" class="nav__link">Itinerari</a>
         <a href="#scrivimi" class="nav__link">Scrivimi</a>
-        <div class="nav__cta">
+      </nav>
+
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn--gold" href="mailto:egittocasamia@gmail.com">Email</a>
+
+        <button class="burger" type="button" aria-label="Apri menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" aria-hidden="true">
+      <div class="container mobile__inner">
+        <a href="#inizia" class="mobile__link">Inizia da qui</a>
+        <a href="#destinazioni" class="mobile__link">Destinazioni</a>
+        <a href="#itinerari" class="mobile__link">Itinerari</a>
+        <a href="#scrivimi" class="mobile__link">Scrivimi</a>
+        <div class="mobile__buttons">
           <a class="btn btn--ghost" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
           <a class="btn btn--gold" href="mailto:egittocasamia@gmail.com">Email</a>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <div class="pill">
-            <span class="pill__dot"></span>
-            <span>Guida pratica, scelte semplici — anche se viaggi da solo</span>
-          </div>
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero" style="--hero-image: url('assets/images/hero.jpg');">
+    <div class="hero__overlay" aria-hidden="true"></div>
 
-          <h1 class="hero__title">
-            Egitto, senza caos:
-            <span class="u-gold">scegli tappe, ritmo e stile.</span>
-          </h1>
-
-          <p class="hero__lead">
-            Una base chiara per costruire il tuo viaggio: <strong>destinazioni</strong>, <strong>spostamenti</strong>, <strong>tempi reali</strong> e
-            itinerari che pubblicheremo e aggiorneremo. Tu esplori, scegli, componi.
-          </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#inizia">Inizia da qui</a>
-            <a class="btn btn--outline" href="#destinazioni">Esplora destinazioni</a>
-            <a class="btn btn--ghost" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Apri Instagram</a>
-          </div>
-
-          <div class="hero__chips">
-            <span class="chip"><span class="chip__icon">✓</span> Per chi viaggia da solo</span>
-            <span class="chip"><span class="chip__icon">✓</span> Idee chiare (giorni + tappe)</span>
-            <span class="chip"><span class="chip__icon">✓</span> Mare, storia o mix</span>
-          </div>
+    <div class="container hero__grid">
+      <div class="hero__card">
+        <div class="pill">
+          <span class="pill__dot" aria-hidden="true"></span>
+          <span>Guida pratica per l’Egitto (anche solo travel)</span>
         </div>
 
-        <!-- HERO CARD (search + quick filters) -->
-        <aside class="heroCard" aria-label="Ricerca rapida">
-          <h2 class="heroCard__title">Cerca e inizia a costruire</h2>
-          <p class="heroCard__text">
-            Scrivi una parola (es. <em>Luxor</em>, <em>Dahab</em>, <em>Nilo</em>) oppure usa i filtri.
+        <h1 class="hero__title">
+          Egitto, senza caos:
+          <span class="accent">scegli tappe, ritmo e stile.</span>
+        </h1>
+
+        <p class="hero__text">
+          Qui trovi una base chiara per orientarti: <strong>destinazioni</strong>, <strong>spostamenti</strong>, tempi realistici
+          e idee di itinerario. Gli itinerari “definitivi” li pubblichiamo e li aggiorniamo nel tempo — intanto puoi
+          esplorare e capire cosa fa per te.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--blue" href="#inizia">Inizia da qui</a>
+          <a class="btn btn--ghost" href="#destinazioni">Esplora destinazioni</a>
+          <a class="btn btn--ghost" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Apri Instagram</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">🧭 Struttura chiara</span>
+          <span class="chip">🧳 Perfetto per chi viaggia da solo</span>
+          <span class="chip">🕒 Tempi e spostamenti reali</span>
+        </div>
+      </div>
+
+      <aside class="hero__side" id="scrivimi">
+        <div class="sidecard">
+          <h2 class="sidecard__title">Dimmi 3 cose e ti rispondo</h2>
+          <p class="sidecard__text">
+            1) periodo (anche indicativo) · 2) quanti siete · 3) cosa cerchi:
+            <strong>storia</strong>, <strong>mare</strong> o <strong>mix</strong>.
           </p>
+
+          <div class="sidecard__buttons">
+            <a class="btn btn--gold btn--full" href="mailto:egittocasamia@gmail.com?subject=Viaggio%20in%20Egitto%20—%203%20info&body=Ciao!%0A%0A1)%20Periodo:%20%0A2)%20Quanti%20siete:%20%0A3)%20Stile%20(storia/mare/mix):%20%0A%0AExtra%20(se%20vuoi):%20budget,%20ritmo,%20citt%C3%A0%20di%20partenza.%0A">Scrivimi via email</a>
+            <a class="btn btn--ghost btn--full" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Scrivimi su Instagram</a>
+          </div>
+
+          <div class="divider"></div>
 
           <div class="search">
-            <input id="searchInput" type="search" placeholder="Cerca nel sito…" autocomplete="off" />
-            <button class="btn btn--primary btn--sm" id="searchBtn" type="button">Cerca</button>
-          </div>
-
-          <div class="filters" role="list" aria-label="Filtri">
-            <button class="filter is-active" type="button" data-filter="all" role="listitem">Tutto</button>
-            <button class="filter" type="button" data-filter="storia" role="listitem">Storia</button>
-            <button class="filter" type="button" data-filter="mare" role="listitem">Mare</button>
-            <button class="filter" type="button" data-filter="mix" role="listitem">Mix</button>
-            <button class="filter" type="button" data-filter="solo" role="listitem">Solo travel</button>
-          </div>
-
-          <div class="heroCard__note">
-            <strong>Tip:</strong> se viaggi da solo, filtra “Solo travel” per idee lineari e spostamenti semplici.
-          </div>
-
-          <div class="heroCard__cta">
-            <a class="btn btn--gold" href="#scrivimi">Ti preparo una traccia</a>
-            <a class="btn btn--ghost" href="#itinerari">Vedi itinerari</a>
-          </div>
-        </aside>
-      </div>
-
-      <!-- Hero image strip (keeps your hero photo alive + airy) -->
-      <div class="hero__imageWrap">
-        <div class="container">
-          <div class="heroImage">
-            <img src="assets/images/hero.jpg" alt="Egitto: dettaglio archeologico" loading="eager" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INIZIA DA QUI -->
-    <section class="section" id="inizia">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <p class="kicker">INIZIA DA QUI</p>
-            <h2 class="sectionTitle">La base: giorni, tappe, spostamenti</h2>
-            <p class="sectionLead">
-              Qui trovi l’impostazione “pulita” per partire bene: prima la struttura, poi i dettagli.
-              Niente labirinti: solo scelte sensate.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid--2">
-          <article class="featureCard" data-tags="mix solo">
-            <div class="featureCard__media">
-              <img src="assets/images/organizzare_viaggio_egitto.jpg" alt="Organizzare il viaggio in Egitto" loading="lazy" />
+            <label class="search__label" for="q">Cerca dentro il sito</label>
+            <div class="search__row">
+              <input id="q" class="search__input" type="search" placeholder="Es. Luxor, Sinai, Nilo, solo travel…" autocomplete="off" />
+              <button class="btn btn--blue" type="button" id="searchBtn">Cerca</button>
             </div>
-            <div class="featureCard__body">
-              <h3>Organizzare il viaggio</h3>
-              <p>Come scegliere la base, quante notti fare, come “legare” le tappe senza stress.</p>
-              <div class="metaRow">
-                <span class="tag">Mix</span>
-                <span class="tag tag--soft">Solo travel</span>
-              </div>
-              <a class="link" href="organizzare-il-viaggio/" aria-label="Vai a Organizzare il viaggio">Apri →</a>
-            </div>
-          </article>
+            <p class="hint">Suggerimento: usa i filtri rapidi qui sotto.</p>
 
-          <article class="featureCard" data-tags="mix">
-            <div class="featureCard__media">
-              <img src="assets/images/viaggio.jpg" alt="Guida pratica per il viaggio" loading="lazy" />
-            </div>
-            <div class="featureCard__body">
-              <h3>Checklist e logistica</h3>
-              <p>SIM, soldi, orari, transfer, treni/voli interni: la parte che fa risparmiare tempo e problemi.</p>
-              <div class="metaRow">
-                <span class="tag">Mix</span>
-              </div>
-              <a class="link" href="dentro-legitto/" aria-label="Vai a Dentro l'Egitto">Apri →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- DESTINAZIONI -->
-    <section class="section section--soft" id="destinazioni">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <p class="kicker">DESTINAZIONI</p>
-            <h2 class="sectionTitle">Scegli l’atmosfera, poi scendi nei dettagli</h2>
-            <p class="sectionLead">
-              Cairo, templi sul Nilo, mare del Sinai: inizia da ciò che ti chiama e costruisci intorno.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid--4">
-          <article class="card" data-tags="storia mix solo">
-            <a class="card__click" href="destinazioni/" aria-label="Apri Cairo"></a>
-            <div class="card__media">
-              <img src="assets/images/dentro_egitto_cairo.jpg" alt="Cairo" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Cairo</h3>
-              <p class="card__text">Piramidi, musei, quartieri e vita locale.</p>
-              <div class="metaRow">
-                <span class="tag">Storia</span>
-                <span class="tag tag--soft">Solo travel</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-tags="storia mix">
-            <a class="card__click" href="destinazioni/" aria-label="Apri Luxor"></a>
-            <div class="card__media">
-              <img src="assets/images/destinazioni_luxor.jpg" alt="Luxor" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Luxor</h3>
-              <p class="card__text">Templi, Valle dei Re e tramonti sul Nilo.</p>
-              <div class="metaRow">
-                <span class="tag">Storia</span>
-                <span class="tag tag--soft">Mix</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-tags="mare mix solo">
-            <a class="card__click" href="destinazioni/" aria-label="Apri Dahab"></a>
-            <div class="card__media">
-              <img src="assets/images/dahab_sinai.jpg" alt="Dahab" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Dahab</h3>
-              <p class="card__text">Mare, deserto e atmosfera rilassata nel Sinai.</p>
-              <div class="metaRow">
-                <span class="tag">Mare</span>
-                <span class="tag tag--soft">Solo travel</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-tags="mare mix">
-            <a class="card__click" href="destinazioni/" aria-label="Apri Sinai"></a>
-            <div class="card__media">
-              <img src="assets/images/sinai_spiaggia.jpg" alt="Sinai" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Sinai</h3>
-              <p class="card__text">Montagne, spiagge e silenzio: reset vero.</p>
-              <div class="metaRow">
-                <span class="tag">Mare</span>
-                <span class="tag tag--soft">Mix</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ITINERARI -->
-    <section class="section" id="itinerari">
-      <div class="container">
-        <div class="sectionHead sectionHead--split">
-          <div>
-            <p class="kicker">ITINERARI</p>
-            <h2 class="sectionTitle">Tracce pronte (che poi riempiamo insieme)</h2>
-            <p class="sectionLead">
-              Questi sono esempi “base” per orientarti. Gli itinerari completi li scriveremo e li pubblicheremo:
-              qui intanto trovi la struttura.
-            </p>
-          </div>
-          <div class="sectionHead__side">
-            <a class="btn btn--outline" href="itinerari/">Vedi tutti gli itinerari</a>
-          </div>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="card card--large" data-tags="mix storia solo">
-            <a class="card__click" href="itinerari/" aria-label="Apri Classico 7 giorni"></a>
-            <div class="card__media">
-              <img src="assets/images/itinerari.jpg" alt="Classico 7 giorni" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Classico 7 giorni</h3>
-              <p class="card__text">Cairo + Luxor + Nilo. Lineare, fattibile, senza incastri strani.</p>
-              <div class="metaRow">
-                <span class="tag">Mix</span>
-                <span class="tag tag--soft">Solo travel</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card--large" data-tags="storia mix">
-            <a class="card__click" href="itinerari/" aria-label="Apri Nilo lento"></a>
-            <div class="card__media">
-              <img src="assets/images/itinerari_nilo.jpg" alt="Nilo lento" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Nilo lento</h3>
-              <p class="card__text">Templi e navigazione tra Luxor e Aswan. Ritmo morbido.</p>
-              <div class="metaRow">
-                <span class="tag">Storia</span>
-                <span class="tag tag--soft">Mix</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card--large" data-tags="storia mix">
-            <a class="card__click" href="itinerari/" aria-label="Apri Sud Egitto"></a>
-            <div class="card__media">
-              <img src="assets/images/destinazioni.jpg" alt="Sud Egitto" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Sud Egitto</h3>
-              <p class="card__text">Luxor, Aswan e villaggi nubiani. Caldo, pietra, luce.</p>
-              <div class="metaRow">
-                <span class="tag">Storia</span>
-                <span class="tag tag--soft">Mix</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / CTA -->
-    <section class="cta" id="scrivimi">
-      <div class="container">
-        <div class="ctaBox">
-          <div class="ctaBox__copy">
-            <p class="kicker">SCRIVIMI</p>
-            <h2 class="ctaTitle">Ti preparo una traccia su misura</h2>
-            <p class="ctaLead">
-              Dimmi solo <strong>quando</strong> (anche indicativo), <strong>quanti siete</strong> e se vuoi <strong>storia</strong>, <strong>mare</strong> o <strong>mix</strong>.
-              Ti rispondo con una traccia chiara: tappe + giorni + spostamenti.
-            </p>
-          </div>
-
-          <div class="ctaBox__actions">
-            <a class="btn btn--gold btn--lg" href="mailto:egittocasamia@gmail.com">Scrivimi via email</a>
-            <a class="btn btn--outline btn--lg" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Scrivimi su Instagram</a>
-
-            <div class="ctaMini">
-              <div class="ctaMini__line"><span>1)</span> Periodo</div>
-              <div class="ctaMini__line"><span>2)</span> Quanti siete</div>
-              <div class="ctaMini__line"><span>3)</span> Storia / Mare / Mix</div>
+            <div class="filters" role="group" aria-label="Filtri rapidi">
+              <button class="filter" data-filter="storia" type="button">🏛️ Storia</button>
+              <button class="filter" data-filter="mare" type="button">🌊 Mare</button>
+              <button class="filter" data-filter="mix" type="button">✨ Mix</button>
+              <button class="filter" data-filter="solo" type="button">🧳 Solo travel</button>
+              <button class="filter filter--reset" data-filter="all" type="button">Reset</button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </aside>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__left">
-          <div class="brand brand--small">
-            <span class="brand__dot"></span>
-            <span class="brand__name">EGITTO CASA MIA</span>
-          </div>
-          <p class="footer__text">
-            Una guida in costruzione: destinazioni, itinerari e scelte pratiche per viaggiatori curiosi (anche in solo).
+  <!-- Inizia da qui -->
+  <section class="section" id="inizia">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="kicker">INIZIA DA QUI</p>
+          <h2 class="section__title">Metti ordine: giorni, tappe, spostamenti</h2>
+          <p class="section__subtitle">
+            La parte che ti salva tempo: prima costruisci la struttura, poi scegli cosa vedere con calma.
           </p>
         </div>
+      </div>
 
-        <div class="footer__right">
-          <a class="footer__link" href="#inizia">Inizia da qui</a>
-          <a class="footer__link" href="#destinazioni">Destinazioni</a>
-          <a class="footer__link" href="#itinerari">Itinerari</a>
-          <a class="footer__link" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a class="footer__link" href="mailto:egittocasamia@gmail.com">Email</a>
+      <div class="grid-3">
+        <article class="card card--image" data-tags="mix solo" data-title="Organizzare il viaggio">
+          <div class="card__media">
+            <img src="assets/images/organizzare_viaggio_egitto.jpg" alt="Organizzare un viaggio in Egitto" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Organizzare il viaggio</h3>
+            <p class="card__text">Come scegliere tappe, quanti giorni servono e che ritmo tenere.</p>
+            <a class="card__link" href="#scrivimi">Se vuoi, te la preparo io →</a>
+          </div>
+        </article>
+
+        <article class="card card--image" data-tags="mix" data-title="Destinazioni">
+          <div class="card__media">
+            <img src="assets/images/destinazioni.jpg" alt="Destinazioni in Egitto" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Destinazioni</h3>
+            <p class="card__text">Cairo, Luxor, Nilo, Sinai: cosa aspettarti e come incastrarle.</p>
+            <a class="card__link" href="#destinazioni">Sfoglia le destinazioni →</a>
+          </div>
+        </article>
+
+        <article class="card card--image" data-tags="storia mare mix solo" data-title="Itinerari">
+          <div class="card__media">
+            <img src="assets/images/itinerari.jpg" alt="Itinerari in Egitto" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Itinerari</h3>
+            <p class="card__text">Tracce di viaggio: classico, Nilo lento, Sinai e mare. (Li scriviamo insieme.)</p>
+            <a class="card__link" href="#itinerari">Guarda le tracce →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinazioni -->
+  <section class="section section--alt" id="destinazioni">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="kicker">DESTINAZIONI</p>
+          <h2 class="section__title">Scegli la vibe, poi costruiamo il giro</h2>
+          <p class="section__subtitle">
+            Una selezione essenziale. Dentro ogni destinazione ci metteremo guide e itinerari completi.
+          </p>
         </div>
       </div>
-    </footer>
-  </main>
 
+      <div class="grid-4">
+        <article class="card" data-tags="storia mix solo" data-title="Cairo">
+          <div class="card__media">
+            <img src="assets/images/dentro_egitto_cairo.jpg" alt="Cairo" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Cairo</h3>
+            <p class="card__text">Piramidi, musei, quartieri storici e vita locale.</p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="storia mix" data-title="Luxor">
+          <div class="card__media">
+            <img src="assets/images/destinazioni_luxor.jpg" alt="Luxor" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Luxor</h3>
+            <p class="card__text">Templi, Valle dei Re e storia lungo il Nilo.</p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="mare solo mix" data-title="Dahab">
+          <div class="card__media">
+            <img src="assets/images/dahab_sinai.jpg" alt="Dahab" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Dahab</h3>
+            <p class="card__text">Mare, deserto e atmosfera rilassata sul Sinai.</p>
+          </div>
+        </article>
+
+        <article class="card" data-tags="mare solo" data-title="Sinai">
+          <div class="card__media">
+            <img src="assets/images/sinai_spiaggia.jpg" alt="Sinai" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Sinai</h3>
+            <p class="card__text">Montagne, mare cristallino e silenzio.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerari -->
+  <section class="section" id="itinerari">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="kicker">ITINERARI</p>
+          <h2 class="section__title">Tracce pronte da rifinire (insieme)</h2>
+          <p class="section__subtitle">
+            Qui mettiamo la struttura “Lonely Planet”: tappe, giorni, spostamenti e alternative sensate.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card" data-tags="storia mix" data-title="Classico 7 giorni">
+          <div class="card__media">
+            <img src="assets/images/villaggio.jpg" alt="Classico 7 giorni" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Classico 7 giorni</h3>
+            <p class="card__text">Cairo + Luxor + Nilo.</p>
+            <a class="card__link" href="#scrivimi">Chiedimi la versione “pulita” →</a>
+          </div>
+        </article>
+
+        <article class="card" data-tags="storia mix solo" data-title="Nilo lento">
+          <div class="card__media">
+            <img src="assets/images/itinerari_nilo.jpg" alt="Nilo lento" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Nilo lento</h3>
+            <p class="card__text">Templi e navigazione tra Luxor e Aswan.</p>
+            <a class="card__link" href="#scrivimi">Te lo incastro sui giorni →</a>
+          </div>
+        </article>
+
+        <article class="card" data-tags="storia mix" data-title="Sud Egitto">
+          <div class="card__media">
+            <img src="assets/images/luxor.jpg" alt="Sud Egitto" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Sud Egitto</h3>
+            <p class="card__text">Luxor, Aswan e villaggi nubiani.</p>
+            <a class="card__link" href="#scrivimi">Dimmi che ritmo vuoi →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA finale -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <h2 class="cta__title">Ti preparo una traccia chiara</h2>
+      <p class="cta__text">
+        Scrivimi periodo, quanti siete e che vibe vuoi (storia / mare / mix). Ti rispondo con tappe + giorni + spostamenti + 2/3 alternative sensate.
+      </p>
+      <div class="cta__buttons">
+        <a class="btn btn--gold" href="mailto:egittocasamia@gmail.com?subject=Traccia%20di%20viaggio%20(Egitto%20Casa%20Mia)&body=Ciao!%0A%0A1)%20Periodo:%20%0A2)%20Quanti%20siete:%20%0A3)%20Stile%20(storia/mare/mix):%20%0A%0AExtra%20(se%20vuoi):%20budget,%20ritmo,%20citt%C3%A0%20di%20partenza.%0A">Scrivimi via email</a>
+        <a class="btn btn--blue" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Scrivimi su Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">EGITTO CASA MIA</p>
+      <p class="footer__small">© <span id="year"></span> — guida indipendente per viaggiatori curiosi.</p>
+      <div class="footer__links">
+        <a href="#top">Torna su</a>
+        <a href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:egittocasamia@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS (ATTENZIONE al path: deve essere ESATTO) -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
