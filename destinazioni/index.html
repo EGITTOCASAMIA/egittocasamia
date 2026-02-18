@@ -4,155 +4,131 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Destinazioni — Egitto Casa Mia</title>
-  <meta name="description" content="Cairo, Luxor, mare: cosa scegliere e per chi." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
-
 <body>
-
-  <header class="nav">
+  <header class="header">
     <div class="container">
-      <div class="nav_inner">
-        <a class="brand" href="../">
-          <span class="dot"></span><span>EGITTO CASA MIA</span>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a class="brand" href="../index.html">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>EGITTO CASA MIA</span>
         </a>
 
-        <nav class="nav_links">
-          <a href="../organizzare-il-viaggio/">Organizza</a>
-          <a href="../itinerari/">Itinerari</a>
-          <a href="../dentro-legitto/">Dentro l’Egitto</a>
-          <a href="#contatti">Scrivimi</a>
-        </nav>
-
-        <div class="nav_cta">
-          <a class="btn ghost" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn primary" href="mailto:egittocasamia@gmail.com">Email</a>
-          <button class="burger" data-burger aria-label="Apri menu" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="../index.html#tipi">Tipi di viaggio</a>
+          <a href="../index.html#tappe">Principali tappe</a>
+          <a href="../itinerari/index.html">Cosa fare</a>
         </div>
+
+        <div class="nav-cta">
+          <a class="pill" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
+          <a class="pill pill--gold" href="mailto:egittocasamia@gmail.com">Email</a>
+          <button class="burger" type="button" data-burger>Menu</button>
+        </div>
+      </nav>
+
+      <div class="mobile-drawer" data-drawer>
+        <a href="../index.html">Home</a>
+        <a href="../tipi/index.html">Tutte le tipologie</a>
+        <a href="../itinerari/index.html">Cosa fare</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Destinazioni</p>
+        <h1 class="h1">Le principali tappe</h1>
+        <p class="lead">Qui trovi la mappa base. Dentro ogni destinazione aggiungeremo guide e itinerari completi.</p>
       </div>
 
-      <div class="mobile_menu" data-mobilemenu data-open="false">
-        <div class="stack">
-          <a href="../organizzare-il-viaggio/">Organizza</a>
-          <a href="../itinerari/">Itinerari</a>
-          <a href="../dentro-legitto/">Dentro l’Egitto</a>
-          <a href="#contatti">Scrivimi</a>
+      <div class="grid grid-4">
+        <div class="card" id="cairo">
+          <div class="card-media"><img src="../assets/images/dentro_egitto_cairo.jpg" alt="Cairo"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cairo</h3>
+            <p class="card-text">Piramidi, musei, quartieri storici e vita locale. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="alessandria">
+          <div class="card-media"><img src="../assets/images/viaggio.jpg" alt="Alessandria d'Egitto"></div>
+          <div class="card-body">
+            <h3 class="card-title">Alessandria d’Egitto</h3>
+            <p class="card-text">Mediterraneo, cultura, lungomare e un ritmo tutto suo. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="luxor">
+          <div class="card-media"><img src="../assets/images/destinazioni_luxor.jpg" alt="Luxor"></div>
+          <div class="card-body">
+            <h3 class="card-title">Luxor</h3>
+            <p class="card-text">Templi e Valle dei Re: la storia qui è “reale”. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="northcoast">
+          <div class="card-media"><img src="../assets/images/destinazioni.jpg" alt="North Coast"></div>
+          <div class="card-body">
+            <h3 class="card-title">North Coast</h3>
+            <p class="card-text">Mare mediterraneo, estate e giornate leggere. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="dahab">
+          <div class="card-media"><img src="../assets/images/dahab_sinai.jpg" alt="Dahab"></div>
+          <div class="card-body">
+            <h3 class="card-title">Dahab</h3>
+            <p class="card-text">Atmosfera rilassata e mare. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="sinai">
+          <div class="card-media"><img src="../assets/images/sinai_spiaggia.jpg" alt="Sinai"></div>
+          <div class="card-body">
+            <h3 class="card-title">Sinai</h3>
+            <p class="card-text">Montagne, spiagge e silenzio. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="nilo">
+          <div class="card-media"><img src="../assets/images/itinerari_nilo.jpg" alt="Nilo"></div>
+          <div class="card-body">
+            <h3 class="card-title">Nilo</h3>
+            <p class="card-text">Navigazione, templi e tappe sul fiume. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+
+        <div class="card" id="aswan">
+          <div class="card-media"><img src="../assets/images/itinerari.jpg" alt="Aswan"></div>
+          <div class="card-body">
+            <h3 class="card-title">Aswan</h3>
+            <p class="card-text">Feluca, luce, Nubia. (Qui andranno le guide.)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, chiara, indipendente.</div>
+        <div class="footer-links">
           <a href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
           <a href="mailto:egittocasamia@gmail.com">Email</a>
         </div>
       </div>
     </div>
-  </header>
-
-  <section class="page_hero">
-    <div class="container">
-      <div class="page_head">
-        <div class="page_head_top">
-          <div class="page_img" style="background-image:url('../assets/images/destinazioni.jpg');"></div>
-          <div class="page_text">
-            <div class="kicker">Scegli bene</div>
-            <h1 class="h2">Destinazioni</h1>
-            <p class="p">
-              Qui ti dico <strong>per chi</strong> è ogni posto e <strong>quando conviene</strong> andarci.
-              L’idea è semplice: poche tappe, fatte bene.
-            </p>
-            <div class="inline_links">
-              <a class="btn primary" href="../itinerari/">Vedi itinerari</a>
-              <a class="btn" href="../organizzare-il-viaggio/">Organizza</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="grid_3">
-        <div class="card">
-          <div class="card_media" style="background-image:url('../assets/images/dentro_egitto_cairo.jpg');"></div>
-          <div class="card_body">
-            <h3 class="card_title">Il Cairo</h3>
-            <p class="card_text">Se vuoi energia, storia e vita vera. Da fare con tempi giusti e spostamenti smart.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_media" style="background-image:url('../assets/images/destinazioni_luxor.jpg');"></div>
-          <div class="card_body">
-            <h3 class="card_title">Luxor</h3>
-            <p class="card_text">Qui ti innamori dei templi. Se ami la storia: è una tappa che ha senso.</p>
-          </div>
-        </div>
-
-        <div class="card" id="sinai">
-          <div class="card_media" style="background-image:url('../assets/images/dahab_sinai.jpg');"></div>
-          <div class="card_body">
-            <h3 class="card_title">Sinai & Dahab</h3>
-            <p class="card_text">Mare, relax e giornate lente. Perfetto se vuoi ricaricare e fare poche cose ma belle.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid_2" style="margin-top:16px;">
-        <div class="panel">
-          <h3 style="margin:0 0 10px;">Come scegliere senza sbagliare</h3>
-          <ul class="list">
-            <li>Se è la prima volta: <strong>Cairo + Luxor</strong> (e poi mare se hai giorni).</li>
-            <li>Se vuoi un viaggio “equilibrato”: aggiungi <strong>Nilo</strong> con criterio.</li>
-            <li>Se vuoi staccare: fai <strong>mare</strong> e 1 visita ben pensata.</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3 style="margin:0 0 10px;">La domanda che ti faccio sempre</h3>
-          <p class="p">
-            Vuoi tornare a casa dicendo “ho visto tutto” oppure “me lo sono goduto”?
-            Non esiste scelta giusta per tutti: esiste quella giusta per te.
-          </p>
-          <div class="inline_links">
-            <a class="btn primary" href="mailto:egittocasamia@gmail.com">Scrivimi</a>
-            <a class="btn" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section" id="contatti">
-    <div class="container">
-      <div class="panel">
-        <h3 style="margin:0 0 10px;">Scrivimi</h3>
-        <p class="p">Dimmi cosa ti interessa (storia / mare / entrambi) + quanti giorni hai. Ti dico cosa farei io.</p>
-        <div class="inline_links">
-          <a class="btn primary" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn" href="mailto:egittocasamia@gmail.com">Email</a>
-        </div>
-        <div class="small" style="margin-top:10px;">@egittocasamia • egittocasamia@gmail.com</div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer_grid">
-        <div>
-          <strong>Egitto Casa Mia</strong>
-          <div class="small" style="margin-top:6px;">Guida pratica, scritta come la direi a un amico.</div>
-          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn" href="https://instagram.com/egittocasamia" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn" href="mailto:egittocasamia@gmail.com">Email</a>
-          </div>
-        </div>
-        <div class="small">Alcune immagini: Unsplash / Pexels.</div>
-      </div>
-    </div>
   </footer>
 
   <script src="../assets/js/main.js"></script>
-  <style>
-    @media (max-width: 980px){ .nav_links{display:none} .burger{display:inline-flex} }
-  </style>
 </body>
 </html>
