@@ -1,19 +1,32 @@
-// EGITTO CASA MIA — main.js
 (function () {
-  const burger = document.querySelector("[data-burger]");
-  const drawer = document.querySelector("[data-drawer]");
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".mobile-menu");
 
-  if (burger && drawer) {
-    burger.addEventListener("click", () => {
-      const isOpen = drawer.getAttribute("data-open") === "true";
-      drawer.setAttribute("data-open", String(!isOpen));
-      drawer.style.display = isOpen ? "none" : "block";
-      burger.setAttribute("aria-expanded", String(!isOpen));
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      menu.hidden = expanded;
     });
 
-    // default closed on load (safe)
-    drawer.style.display = "none";
-    drawer.setAttribute("data-open", "false");
-    burger.setAttribute("aria-expanded", "false");
+    // Chiudi menu quando clicchi un link
+    menu.addEventListener("click", (e) => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      toggle.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    });
   }
+
+  // Smooth scroll per anchor interni (senza eventi scroll pesanti)
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href");
+      if (!id || id === "#") return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, { passive: false });
+  });
 })();
