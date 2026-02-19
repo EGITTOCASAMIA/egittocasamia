@@ -3,92 +3,364 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Egitto Casa Mia</title>
-  <meta name="description" content="Guida indipendente: tappe chiare, idee in giornata, itinerari da costruire con calma." />
+  <title>EGITTO CASA MIA</title>
+
+  <!-- ✅ Tieni questi due link: se il tuo style.css/main.js esistono già, restano agganciati -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+
+  <!-- ✅ Sicurezza: CSS “di base” per riportare tutto in scala corretta (anche se per errore hai rotto style.css) -->
+  <style>
+    :root{
+      --bg:#f3ecdf;
+      --ink:#0b1830;
+      --muted:#5e6773;
+      --card:#ffffff;
+      --stroke:rgba(20,27,40,.10);
+      --shadow:0 18px 40px rgba(20,27,40,.12);
+      --pill:#ffffff;
+      --gold:#caa33c;
+      --nav:#efe7d9;
+      --max:1180px;
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.4;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px;}
+    .section{padding:64px 0;}
+    .kicker{
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(11,24,48,.60);
+      margin:0 0 16px 0;
+    }
+    h1,h2{
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      letter-spacing:-.02em;
+      margin:0 0 12px 0;
+      line-height:1.05;
+      color:var(--ink);
+    }
+    h1{font-size:64px}
+    h2{font-size:56px}
+    p.lead{
+      font-size:18px;
+      color:rgba(11,24,48,.70);
+      margin:0 0 28px 0;
+      max-width:62ch;
+    }
+
+    /* Nav */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(239,231,217,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(20,27,40,.08);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      height:72px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700;
+      letter-spacing:.08em;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background:var(--gold);
+      box-shadow:0 0 0 4px rgba(202,163,60,.18);
+    }
+    .navlinks{
+      display:flex; align-items:center; gap:22px;
+      font-weight:600;
+      color:rgba(11,24,48,.78);
+    }
+    .navlinks a{padding:10px 6px; border-radius:12px}
+    .navlinks a:hover{background:rgba(255,255,255,.55)}
+
+    .cta{
+      display:flex; align-items:center; gap:10px;
+    }
+    .pill{
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid rgba(20,27,40,.14);
+      background:rgba(255,255,255,.55);
+      font-weight:700;
+    }
+    .pill.gold{
+      border-color:transparent;
+      background:var(--gold);
+      color:#0b1830;
+    }
+
+    /* Hero full width */
+    .hero{
+      padding:0;
+    }
+    .heroFrame{
+      width:100%;
+      height:420px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid rgba(20,27,40,.10);
+      background:#d9d1c3;
+    }
+    .heroFrame img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.02) contrast(1.02);
+    }
+    .heroOverlay{
+      position:absolute; inset:0;
+      background:linear-gradient(90deg,
+        rgba(243,236,223,.92) 0%,
+        rgba(243,236,223,.80) 36%,
+        rgba(243,236,223,.25) 70%,
+        rgba(243,236,223,0) 100%);
+    }
+    .heroContent{
+      position:absolute; inset:0;
+      display:flex; align-items:center;
+    }
+    .heroInner{max-width:var(--max); margin:0 auto; padding:0 22px; width:100%;}
+    .heroCard{
+      max-width:640px;
+      padding:28px 0;
+    }
+    .heroKicker{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(11,24,48,.55);
+      margin-bottom:14px;
+    }
+    .heroTitle{
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size:72px;
+      margin:0 0 10px 0;
+      line-height:1.0;
+    }
+    .heroSub{
+      margin:0 0 18px 0;
+      font-size:18px;
+      color:rgba(11,24,48,.70);
+      max-width:60ch;
+    }
+    .heroBtns{display:flex; gap:12px; flex-wrap:wrap;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid rgba(20,27,40,.14);
+      background:rgba(255,255,255,.55);
+    }
+    .btn.primary{
+      background:#0b3a74;
+      border-color:transparent;
+      color:white;
+      box-shadow:0 18px 40px rgba(11,58,116,.18);
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:18px;
+      margin-top:26px;
+    }
+    .card{
+      grid-column: span 3;
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .card .img{
+      height:180px;
+      background:#eee;
+    }
+    .card .img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .card .body{
+      padding:18px 18px 20px;
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:28px;
+      letter-spacing:-.02em;
+      color:var(--ink);
+    }
+    .card p{
+      margin:0;
+      color:rgba(11,24,48,.68);
+      font-size:18px;
+    }
+
+    /* 4-col but responsive */
+    @media (max-width: 1100px){
+      h1{font-size:54px}
+      h2{font-size:46px}
+      .heroTitle{font-size:56px}
+      .card{grid-column: span 6}
+      .heroFrame{height:380px}
+    }
+    @media (max-width: 680px){
+      .nav{height:auto; padding:14px 0; gap:12px; flex-wrap:wrap;}
+      .navlinks{flex-wrap:wrap; justify-content:center}
+      .heroFrame{height:360px}
+      .heroTitle{font-size:44px}
+      .card{grid-column: span 12}
+      .section{padding:46px 0}
+    }
+
+    /* Small section CTA */
+    .sectionCta{
+      margin-top:22px;
+    }
+    .bigBtn{
+      display:inline-flex;
+      padding:16px 22px;
+      border-radius:999px;
+      background:#0b3a74;
+      color:#fff;
+      font-weight:900;
+      box-shadow:0 18px 40px rgba(11,58,116,.18);
+    }
+
+    footer{
+      border-top:1px solid rgba(20,27,40,.10);
+      padding:28px 0;
+      color:rgba(11,24,48,.65);
+      background:rgba(255,255,255,.22);
+    }
+    .footRow{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; flex-wrap:wrap;
+    }
+    .footRow strong{color:rgba(11,24,48,.85)}
+  </style>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="index.html">
-        <span class="brand-dot"></span>
-        <span>EGITTO CASA MIA</span>
-      </a>
+  <!-- NAV -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="index.html">
+          <span class="dot"></span>
+          <span>EGITTO CASA MIA</span>
+        </a>
 
-      <nav class="navlinks">
-        <a href="#tipi">Tipi di viaggio</a>
-        <a href="#tappe">Principali tappe</a>
-        <a href="#cosa-fare">Cosa fare</a>
-      </nav>
+        <nav class="navlinks">
+          <a href="#tipi">Tipi di viaggio</a>
+          <a href="#tappe">Principali tappe</a>
+          <a href="#cosa-fare">Cosa fare</a>
+        </nav>
 
-      <div class="nav-ctas">
-        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="pill gold" href="mailto:itsagrogpt2@gmail.com">Email</a>
+        <div class="cta">
+          <!-- ✅ QUI METTI I TUOI LINK VERI -->
+          <a class="pill" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a class="pill gold" href="mailto:itsagrogpt2@gmail.com">Email</a>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- HERO FULL WIDTH -->
-  <section class="hero">
-    <div class="hero-bleed">
-      <div class="hero-media">
-        <div class="container hero-inner">
-          <div class="hero-content">
-            <p class="kicker">Guida indipendente</p>
-            <h1 class="hero-title">Egitto.<br/>Da capire prima di partire.</h1>
-            <p class="hero-sub">Destinazioni, tempi e idee per costruire il tuo viaggio con calma.</p>
+  <!-- HERO (full width, senza bordi) -->
+  <header class="hero" id="top">
+    <div class="heroFrame">
+      <img src="assets/images/hero.jpg" alt="Egitto" />
+      <div class="heroOverlay"></div>
 
-            <div class="btn-row">
+      <div class="heroContent">
+        <div class="heroInner">
+          <div class="heroCard">
+            <div class="heroKicker">Guida indipendente</div>
+            <div class="heroTitle">Egitto.<br/>Da capire prima di partire.</div>
+            <p class="heroSub">Destinazioni, tempi e idee per costruire il tuo viaggio con calma.</p>
+
+            <div class="heroBtns">
               <a class="btn primary" href="#tipi">Inizia da qui</a>
-              <a class="btn" href="destinazioni/index.html">Vedi tutte le destinazioni</a>
-              <a class="btn" href="itinerari/index.html">Vedi tutte le idee</a>
+              <a class="btn" href="#tappe">Vedi tutte le destinazioni</a>
+              <a class="btn" href="#cosa-fare">Vedi tutte le idee</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- TIPI DI VIAGGIO -->
-  <section id="tipi" class="section">
-    <div class="container">
+  <section class="section" id="tipi">
+    <div class="wrap">
       <h2>Scegli uno stile</h2>
-      <p style="margin-top:10px;">Quattro punti di partenza. Pagine dedicate, poi le tappe.</p>
+      <p class="lead">Quattro punti di partenza. Pagine dedicate, poi le tappe.</p>
 
-      <div style="height:18px;"></div>
-
-      <div class="grid cols-4">
-        <a class="card" href="tipi/templi-e-storia.html">
-          <img class="card-media" src="assets/images/destinazioni_luxor.jpg" alt="Templi & Storia" />
-          <div class="card-body">
-            <div class="card-title">Templi &amp; Storia</div>
-            <p class="card-text">Tappe forti, ordine chiaro.</p>
+      <div class="grid">
+        <!-- Templi & Storia -->
+        <a class="card" href="tipi/index.html#templi-storia">
+          <div class="img">
+            <img src="assets/images/destinazioni_luxor.jpg" alt="Templi e storia" />
+          </div>
+          <div class="body">
+            <h3>Templi &amp; Storia</h3>
+            <p>Tappe forti, ordine chiaro.</p>
           </div>
         </a>
 
-        <a class="card" href="tipi/citta-e-sapori.html">
-          <img class="card-media" src="assets/images/dentro_egitto_cairo.jpg" alt="Città & Sapori" />
-          <div class="card-body">
-            <div class="card-title">Città &amp; Sapori</div>
-            <p class="card-text">Quartieri, mercati, cibo.</p>
+        <!-- Città & Sapori ✅ dentro_egitto_cairo.jpg -->
+        <a class="card" href="tipi/index.html#citta-sapori">
+          <div class="img">
+            <img src="assets/images/dentro_egitto_cairo.jpg" alt="Città e sapori" />
+          </div>
+          <div class="body">
+            <h3>Città &amp; Sapori</h3>
+            <p>Quartieri, mercati, cibo.</p>
           </div>
         </a>
 
-        <a class="card" href="tipi/deserto-e-avventura.html">
-          <img class="card-media" src="assets/images/deserto_avventura.jpg" alt="Deserto & Avventura" />
-          <div class="card-body">
-            <div class="card-title">Deserto &amp; Avventura</div>
-            <p class="card-text">Oasi, strade, natura.</p>
+        <!-- Deserto & Avventura ✅ deserto_avventura.jpg -->
+        <a class="card" href="tipi/index.html#deserto-avventura">
+          <div class="img">
+            <img src="assets/images/deserto_avventura.jpg" alt="Deserto e avventura" />
+          </div>
+          <div class="body">
+            <h3>Deserto &amp; Avventura</h3>
+            <p>Oasi, strade, natura.</p>
           </div>
         </a>
 
-        <a class="card" href="tipi/mare-e-relax.html">
-          <img class="card-media" src="assets/images/dahab_sinai.jpg" alt="Mare & Relax" />
-          <div class="card-body">
-            <div class="card-title">Mare &amp; Relax</div>
-            <p class="card-text">Luce, acqua, giorni lenti.</p>
+        <!-- Mare & Relax -->
+        <a class="card" href="tipi/index.html#mare-relax">
+          <div class="img">
+            <img src="assets/images/sinai_spiaggia.jpg" alt="Mare e relax" />
+          </div>
+          <div class="body">
+            <h3>Mare &amp; Relax</h3>
+            <p>Luce, acqua, giorni lenti.</p>
           </div>
         </a>
       </div>
@@ -96,105 +368,123 @@
   </section>
 
   <!-- PRINCIPALI TAPPE -->
-  <section id="tappe" class="section" style="background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div class="container">
-      <p class="kicker">Principali tappe</p>
+  <section class="section" id="tappe">
+    <div class="wrap">
+      <div class="kicker">Principali tappe</div>
       <h2>La mappa base</h2>
-      <p style="margin-top:10px;">Poche tappe per orientarti. Poi approfondiamo, una guida alla volta.</p>
+      <p class="lead">Poche tappe per orientarti. Poi approfondiamo, una guida alla volta.</p>
 
-      <div style="height:18px;"></div>
-
-      <div class="grid cols-4">
+      <div class="grid">
+        <!-- Cairo ✅ dentro_egitto_cairooos.jpg -->
         <a class="card" href="destinazioni/index.html#cairo">
-          <img class="card-media" src="assets/images/dentro_egitto_cairooos.jpg" alt="Cairo" />
-          <div class="card-body">
-            <div class="card-title">Cairo</div>
-            <p class="card-text">Piramidi, musei, vita.</p>
+          <div class="img">
+            <img src="assets/images/dentro_egitto_cairooos.jpg" alt="Cairo" />
+          </div>
+          <div class="body">
+            <h3>Cairo</h3>
+            <p>Piramidi, musei, vita.</p>
           </div>
         </a>
 
+        <!-- Alessandria ✅ alessandria.jpg -->
         <a class="card" href="destinazioni/index.html#alessandria">
-          <img class="card-media" src="assets/images/alessandria.jpg" alt="Alessandria d'Egitto" />
-          <div class="card-body">
-            <div class="card-title">Alessandria</div>
-            <p class="card-text">Mediterraneo, lungomare.</p>
+          <div class="img">
+            <img src="assets/images/alessandria.jpg" alt="Alessandria" />
+          </div>
+          <div class="body">
+            <h3>Alessandria</h3>
+            <p>Mediterraneo, lungomare.</p>
           </div>
         </a>
 
+        <!-- Luxor -->
         <a class="card" href="destinazioni/index.html#luxor">
-          <img class="card-media" src="assets/images/destinazioni_luxor.jpg" alt="Luxor" />
-          <div class="card-body">
-            <div class="card-title">Luxor</div>
-            <p class="card-text">Templi sul Nilo.</p>
+          <div class="img">
+            <img src="assets/images/destinazioni_luxor.jpg" alt="Luxor" />
+          </div>
+          <div class="body">
+            <h3>Luxor</h3>
+            <p>Templi sul Nilo.</p>
           </div>
         </a>
 
+        <!-- North Coast ✅ file chiamato LETTERALMENTE “north%20coast.jpg”
+             IMPORTANTISSIMO: in URL devi scrivere %2520 per puntare a un filename con %20 dentro. -->
         <a class="card" href="destinazioni/index.html#north-coast">
-          <img class="card-media" src="assets/images/north%20coast.jpg" alt="North Coast" />
-          <div class="card-body">
-            <div class="card-title">North Coast</div>
-            <p class="card-text">Estate sul Mediterraneo, case sul mare.</p>
+          <div class="img">
+            <img src="assets/images/north%2520coast.jpg" alt="North Coast" />
+          </div>
+          <div class="body">
+            <h3>North Coast</h3>
+            <p>Estate sul Mediterraneo, case sul mare.</p>
           </div>
         </a>
       </div>
 
-      <div class="block-cta">
-        <a class="btn primary" href="destinazioni/index.html">Vedi tutte le destinazioni</a>
+      <div class="sectionCta">
+        <a class="bigBtn" href="destinazioni/index.html">Vedi tutte le destinazioni</a>
       </div>
     </div>
   </section>
 
   <!-- COSA FARE -->
-  <section id="cosa-fare" class="section">
-    <div class="container">
-      <p class="kicker">Cosa fare</p>
+  <section class="section" id="cosa-fare">
+    <div class="wrap">
+      <div class="kicker">Cosa fare</div>
       <h2>Idee in giornata</h2>
-      <p style="margin-top:10px;">Mini-itinerari: semplici, combinabili.</p>
+      <p class="lead">Mini-itinerari: semplici, combinabili.</p>
 
-      <div style="height:18px;"></div>
-
-      <div class="grid cols-3">
-        <a class="card" href="itinerari/index.html#cairo-1-giorno">
-          <img class="card-media" src="assets/images/cairo_1gg.jpg" alt="Cairo — 1 giorno" />
-          <div class="card-body">
-            <div class="card-title">Cairo — 1 giorno</div>
-            <p class="card-text">Una traccia chiara.</p>
+      <div class="grid">
+        <!-- Cairo 1 giorno ✅ cairo_1gg.jpg -->
+        <a class="card" href="itinerari/index.html#cairo-1giorno">
+          <div class="img">
+            <img src="assets/images/cairo_1gg.jpg" alt="Cairo in un giorno" />
+          </div>
+          <div class="body">
+            <h3>Cairo — 1 giorno</h3>
+            <p>Una traccia chiara.</p>
           </div>
         </a>
 
+        <!-- Alessandria in giornata -->
         <a class="card" href="itinerari/index.html#alessandria-giornata">
-          <img class="card-media" src="assets/images/alessandria.jpg" alt="Alessandria — in giornata" />
-          <div class="card-body">
-            <div class="card-title">Alessandria — in giornata</div>
-            <p class="card-text">Passeggiata + soste.</p>
+          <div class="img">
+            <img src="assets/images/alessandria.jpg" alt="Alessandria in giornata" />
+          </div>
+          <div class="body">
+            <h3>Alessandria — in giornata</h3>
+            <p>Passeggiata + soste.</p>
           </div>
         </a>
 
-        <a class="card" href="itinerari/index.html#luxor-1-giorno">
-          <img class="card-media" src="assets/images/luxor1gg.jpg" alt="Luxor — 1 giorno" />
-          <div class="card-body">
-            <div class="card-title">Luxor — 1 giorno</div>
-            <p class="card-text">Templi e tramonto.</p>
+        <!-- Luxor 1 giorno ✅ luxor1gg.jpg -->
+        <a class="card" href="itinerari/index.html#luxor-1giorno">
+          <div class="img">
+            <img src="assets/images/luxor1gg.jpg" alt="Luxor in un giorno" />
+          </div>
+          <div class="body">
+            <h3>Luxor — 1 giorno</h3>
+            <p>Templi e tramonto.</p>
           </div>
         </a>
       </div>
 
-      <div class="block-cta">
-        <a class="btn primary" href="itinerari/index.html">Vedi tutte le idee</a>
+      <div class="sectionCta">
+        <a class="bigBtn" href="itinerari/index.html">Vedi tutte le idee</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-row">
-      <div class="small"><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="pill" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="pill" href="mailto:itsagrogpt2@gmail.com">Email</a>
+  <footer>
+    <div class="wrap">
+      <div class="footRow">
+        <div><strong>EGITTO CASA MIA</strong> — guida pratica, indipendente.</div>
+        <div class="cta">
+          <a class="pill" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a class="pill" href="mailto:itsagrogpt2@gmail.com">Email</a>
+        </div>
       </div>
     </div>
   </footer>
 </body>
 </html>
-
